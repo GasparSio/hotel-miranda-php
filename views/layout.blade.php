@@ -131,13 +131,13 @@
             </div>
         </section>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="../js/header.js"></script>
+    <script src="../js/home.js"></script>
+    <script src="../js/about.js"></script>
+    <script src="../js/offers.js"></script>
+    <script src="../js/room-detail.js"></script>
+    <script src="../js/rooms-grid.js"></script>
 </body>
-<script src=".../js/header.js"></script>
-<script src=".../js/home.js"></script>
-<script src=".../js/about.js"></script>
-<script src=".../js/offers.js"></script>
-<script src=".../js/room-detail.js"></script>
-<script src=".../js/rooms-grid.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 
 </html>
