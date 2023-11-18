@@ -1,5 +1,5 @@
 @extends('layout.blade.php')
-@section('title', 'Miranda Hotel - About Us')
+@section('title', 'About Us')
 
 @section('content')
 
@@ -178,7 +178,7 @@
             </div>
         </div>
     </section>
-    
+
     <script src="./js/header.js"></script>
     <script src="./js/about.js"></script>
 
