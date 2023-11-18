@@ -20,20 +20,20 @@
             </div>
         </div>
         <div class="header__section-links">
-            <a href="/about.php" class="section-why">About Us</a>
-            <a href="/rooms-grid.php" class="section-benefits">Rooms</a>
-            <a href="/offers.php" class="section-prices">Offers</a>
-            <a href="/contact.php" class="section-contact">Contact</a>
+            <a href="./about.php" class="section-why">About Us</a>
+            <a href="./rooms-grid.php" class="section-benefits">Rooms</a>
+            <a href="./offers.php" class="section-prices">Offers</a>
+            <a href="./contact.php" class="section-contact">Contact</a>
         </div>
         <div class="header__section-search-account">
             <img src="./img/home/img-account.png" alt="Account icon">
             <img src="./img/home/img-search.png" alt="Search icon">
         </div>
         <div class="header__mob-menu inactive">
-            <a href="/about.php" class="section-why">About Us</a>
-            <a href="/rooms-grid.php" class="section-benefits">Rooms</a>
-            <a href="/offers.php" class="section-prices">Offers</a>
-            <a href="/contact.php" class="section-contact">Contact</a>
+            <a href="./about.php" class="section-why">About Us</a>
+            <a href="./rooms-grid.php" class="section-benefits">Rooms</a>
+            <a href="./offers.php" class="section-prices">Offers</a>
+            <a href="./contact.php" class="section-contact">Contact</a>
         </div>  
     </header>
     <section class="room__detail-about__section">
@@ -44,9 +44,9 @@
                 <h1>Ultimate Room</h1>
             </div>
             <div class="room__detail-about__section-links">
-                <a href="/index.php" class="room-detail-link-home">Home</a>
+                <a href="./index.php" class="room-detail-link-home">Home</a>
                 <span>|</span>
-                <a href="/room-detail.php" class="room-detail-link-about">Room Details</a>
+                <a href="./room-detail.php" class="room-detail-link-about">Room Details</a>
             </div>
         </div>
     </section>
