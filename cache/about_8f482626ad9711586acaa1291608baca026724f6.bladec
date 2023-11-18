@@ -116,8 +116,8 @@
  <span>06</span>
  </div>
  </div>
- <button class="prev-btn2"><img src="../img/home/img-slider-left-arrow.png" alt="left arrow"></button>
- <button class="next-btn2"><img src="../img/home/img-slider-right-arrow.png" alt="right arrow"></button>
+ <button class="prev-btnAbout"><img src="../img/home/img-slider-left-arrow.png" alt="left arrow"></button>
+ <button class="next-btnAbout"><img src="../img/home/img-slider-right-arrow.png" alt="right arrow"></button>
  </div>
 </section>
 <section class="about__counter__section">

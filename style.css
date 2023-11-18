@@ -1916,8 +1916,18 @@
   color: rgba(0, 0, 0, 0.28);
 }
 
-.prev-btn2,
-.next-btn2 {
+.next-btnAbout {
+  position: absolute;
+  right: 0;
+  top: 45%;
+  transform: translateY(-50%);
+  border: none;
+  cursor: pointer;
+  background: transparent;
+  outline: none;
+}
+
+.prev-btnAbout {
   position: absolute;
   top: 45%;
   transform: translateY(-50%);
@@ -1965,8 +1975,8 @@
   .about-card span {
     color: rgba(0, 0, 0, 0.28);
   }
-  .prev-btn2,
-  .next-btn2 {
+  .prev-btnAbout,
+  .next-btnAbout {
     display: none;
   }
 }
