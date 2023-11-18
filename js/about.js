@@ -1,22 +1,24 @@
 //SLIDER FEATURES CARDS
-const cardsContainer2 = document.querySelector(".about__cards-container");
-const prevBtn2 = document.querySelector(".prev-btn2");
-const nextBtn2 = document.querySelector(".next-btn2");
+const cardsContainerAbout = document.querySelector(".about__cards-container");
+const prevBtnAbout = document.querySelector(".prev-btnAbout");
+const nextBtnAbout = document.querySelector(".next-btnAbout");
 
-let cardIndex2 = 0;
-const numCards2 = document.querySelectorAll(".about-card").length;
+let cardIndexAbout = 0;
+const numCardsAbout = document.querySelectorAll(".about-card").length;
 
 function showCard2(index) {
-    const cards = document.querySelectorAll(".about-card");
-    cardsContainer2.style.transform = `translateX(-${index * 320}px)`;
+  const cards = document.querySelectorAll(".about-card");
+  cardsContainerAbout.style.transform = `translateX(-${index * 320}px)`;
 }
 
-prevBtn2.addEventListener("click", () => {
-  cardIndex2 = (cardIndex2 - 1 + numCards2) % numCards2;
-  showCard2(cardIndex2);
+prevBtnAbout.addEventListener("click", () => {
+  console.log('hola hola');
+  cardIndexAbout = (cardIndexAbout - 1 + numCardsAbout) % numCardsAbout;
+  showCard2(cardIndexAbout);
 });
 
-nextBtn2.addEventListener("click", () => {
-    cardIndex2 = (cardIndex2 + 1) % numCards2;
-    showCard2(cardIndex2);
+nextBtnAbout.addEventListener("click", () => {
+  console.log('hola hola');
+  cardIndexAbout = (cardIndexAbout + 1) % numCardsAbout;
+  showCard2(cardIndexAbout);
 });
