@@ -10,7 +10,7 @@ $blade = new BladeOne($views, $compiledFolder, BladeOne::MODE_AUTO);
 
 // Pasar datos a la vista si es necesario
 $data = [
-    'title' => 'Mi Sitio',
+    'title' => 'Home',
 ];
 
 // Renderiza la vista principal (index.blade.php)
