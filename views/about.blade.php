@@ -1,4 +1,4 @@
-@extends('layout.blade.php')
+@extends('layout')
 @section('title', 'About Us')
 
 @section('content')
