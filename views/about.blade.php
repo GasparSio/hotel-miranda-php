@@ -11,9 +11,9 @@
                 <h1>About Us</h1>
             </div>
             <div class="about__about__section-links">
-                <a href="/index.php" class="about-link-home">Home</a>
+                <a href="./index.php" class="about-link-home">Home</a>
                 <span>|</span>
-                <a href="/about.php" class="about-link-about">About</a>
+                <a href="./about.php" class="about-link-about">About</a>
             </div>
         </div>
     </section>
@@ -171,9 +171,9 @@
                     <img id="about-img3" src="./img/about/counter-slider-img3.jpg" alt="hotel image">
                 </div>
                 <div class="about__section-slider-nav">
-                    <a href="about-php"></a>
-                    <a href="about-php"></a>
-                    <a href="about-php"></a>
+                    <a href="about.php"></a>
+                    <a href="about.php"></a>
+                    <a href="about.php"></a>
                 </div>
             </div>
         </div>
