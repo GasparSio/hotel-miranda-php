@@ -1,15 +1,21 @@
-<header class="header__section">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@yield('title', 'Mi Sitio')</title>
+</head>
+<body>
+    <header class="header__section">
         <div class="header__section-ham-menu">
             <span class="hamIcon"><img src="./img/home/img-hamb.png" alt="Hamburg menu icon" class="icon-menu--big"></span>
             <span class="crossIcon"><img src="./img/home/img-cross.png" alt="Cross menu icon" class="icon-menu--cross inactive"></span>
         </div>
         <div class="header__section-icon">
             <div class="icon_section-H">
-                <!-- <img src="./img/img-icon.png" alt="Logo icon"> -->
                 <span>H</span>
             </div>
             <div class="icon_section-HM">
-                <!-- <img src="./img/img-icon-title.png" alt="Title icon"> -->
                 <span class="section__HM-hotel">HOTEL</span>
                 <span class="section__HM-miranda">MIRANDA</span>
             </div>
@@ -30,9 +36,10 @@
             <a href="./offers.html" class="section-prices">Offers</a>
             <a href="./contact.html" class="section-contact">Contact</a>
         </div>  
-</header>
-
-
+    </header>
+    <div>
+        @yield('content')
+    </div>
 <footer>
     <section class="footer__section" style="background-image: url(./img/home/Footer.png)">
         <div class="footer__section-info-container">
@@ -117,3 +124,11 @@
         </div>
     </section>
 </footer>
+    
+</body>
+</html>
+
+
+
+
+
