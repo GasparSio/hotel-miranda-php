@@ -15,5 +15,3 @@ $data = [
 
 // Renderiza la vista principal (index.blade.php)
 echo $blade->run('index', $data);
-?>
-
