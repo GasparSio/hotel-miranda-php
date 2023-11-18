@@ -20,20 +20,20 @@
             </div>
         </div>
         <div class="header__section-links">
-            <a href="./about.html" class="section-why">About Us</a>
-            <a href="./rooms-grid.html" class="section-benefits">Rooms</a>
-            <a href="./offers.html" class="section-prices">Offers</a>
-            <a href="./contact.html" class="section-contact">Contact</a>
+            <a href="/about.php" class="section-why">About Us</a>
+            <a href="/rooms-grid.php" class="section-benefits">Rooms</a>
+            <a href="/offers.php" class="section-prices">Offers</a>
+            <a href="/contact.php" class="section-contact">Contact</a>
         </div>
         <div class="header__section-search-account">
             <img src="./img/home/img-account.png" alt="Account icon">
             <img src="./img/home/img-search.png" alt="Search icon">
         </div>
         <div class="header__mob-menu inactive">
-            <a href="./about.html" class="section-why">About Us</a>
-            <a href="./rooms-grid.html" class="section-benefits">Rooms</a>
-            <a href="./offers.html" class="section-prices">Offers</a>
-            <a href="./contact.html" class="section-contact">Contact</a>
+            <a href="/about.php" class="section-why">About Us</a>
+            <a href="/rooms-grid.php" class="section-benefits">Rooms</a>
+            <a href="/offers.php" class="section-prices">Offers</a>
+            <a href="/contact.php" class="section-contact">Contact</a>
         </div>  
     </header>
     <section class="room__detail-about__section">
@@ -44,9 +44,9 @@
                 <h1>Ultimate Room</h1>
             </div>
             <div class="room__detail-about__section-links">
-                <a href="./index.html" class="room-detail-link-home">Home</a>
+                <a href="/index.php" class="room-detail-link-home">Home</a>
                 <span>|</span>
-                <a href="./room-detail.html" class="room-detail-link-about">Room Details</a>
+                <a href="/room-detail.php" class="room-detail-link-about">Room Details</a>
             </div>
         </div>
     </section>
@@ -210,7 +210,7 @@
                     <p>Lorem ipsum dolor sit amet, consectetur adipi sicing elit, sed do eiusmod tempor.</p>
                     <div class="room__detail-grid-price">
                         <span>$345/Night</span>
-                        <a href="room-detail.html">Booking Now</a>
+                        <a href="room-detail.php">Booking Now</a>
                     </div>
                 </div>
                 <div class="room__detail-rooms-slider card-detail2">
@@ -228,7 +228,7 @@
                     <p>Lorem ipsum dolor sit amet, consectetur adipi sicing elit, sed do eiusmod tempor.</p>
                     <div class="room__detail-grid-price">
                         <span>$345/Night</span>
-                        <a href="room-detail.html">Booking Now</a>
+                        <a href="room-detail.php">Booking Now</a>
                     </div>
                 </div>
             </div>

@@ -9,8 +9,8 @@
             <p>THE ULTIMATE LUXURY EXPERIENCE</p>
             <h1>The Perfect Base For You</h1>
             <div class="taketour_section-button-content">
-                <a href="rooms-grid.html" class="button-taketour">TAKE A TOUR</a>
-                <a href="about.html" class="button-learnmore">LEARN MORE</a>
+                <a href="rooms-grid.php" class="button-taketour">TAKE A TOUR</a>
+                <a href="about.php" class="button-learnmore">LEARN MORE</a>
             </div>
         </div>
     </section>
@@ -28,7 +28,7 @@
                 </div>
             </div>
             <div class="schedule__section-button">
-                <a href="rooms-grid.html">CHECK AVAILABILITY</a>
+                <a href="rooms-grid.php">CHECK AVAILABILITY</a>
             </div>
     </section>
     <section class="about__section">
@@ -37,7 +37,7 @@
             <h1>Discover Our Underground.</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
             <div class="about__section-info-button">
-                <a href="rooms-grid.html">BOOK NOW</a>
+                <a href="rooms-grid.php">BOOK NOW</a>
             </div>
         </div>
         <div class="about__section-feature">
@@ -280,7 +280,7 @@
             </div>
         </div>
         <div class="video__section-button"> 
-            <a href="rooms-grid.html">Book Now</a>
+            <a href="rooms-grid.php">Book Now</a>
         </div>
     </section>
     <section class="features__section">

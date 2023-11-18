@@ -11,9 +11,9 @@
                 <h1>Our Offers</h1>
             </div>
             <div class="room__detail-about__section-links">
-                <a href="./index.html" class="room-detail-link-home">Home</a>
+                <a href="/index.php" class="room-detail-link-home">Home</a>
                 <span>|</span>
-                <a href="./offers.html" class="room-detail-link-about">Offers</a>
+                <a href="/offers.php" class="room-detail-link-about">Offers</a>
             </div>
         </div>
     </section>
@@ -91,7 +91,7 @@
                 </div>
             </div>
             <div class="offers__room-button-container">
-                <a href="room-detail.html">Book Now</a>
+                <a href="room-detail.php">Book Now</a>
             </div>
         </div>
     </section>
@@ -169,7 +169,7 @@
                 </div>
             </div>
             <div class="offers__room-button-container">
-                <a href="room-detail.html">Book Now</a>
+                <a href="room-detail.php">Book Now</a>
             </div>
         </div>
     </section>
@@ -247,7 +247,7 @@
                 </div>
             </div>
             <div class="offers__room-button-container">
-                <a href="room-detail.html">Book Now</a>
+                <a href="room-detail.php">Book Now</a>
             </div>
         </div>
     </section>
@@ -325,7 +325,7 @@
                 </div>
             </div>
             <div class="offers__room-button-container">
-                <a href="room-detail.html">Book Now</a>
+                <a href="room-detail.php">Book Now</a>
             </div>
         </div>
     </section>
@@ -352,7 +352,7 @@
                     <p>Lorem ipsum dolor sit amet, consectetur adipi sicing elit, sed do eiusmod tempor.</p>
                     <div class="offers__detail-grid-price">
                         <span>$345/Night</span>
-                        <a href="room-detail.html">Booking Now</a>
+                        <a href="room-detail.php">Booking Now</a>
                     </div>
                 </div>
                 <div class="offers__detail-rooms-slider card-detail1">
@@ -370,7 +370,7 @@
                     <p>Lorem ipsum dolor sit amet, consectetur adipi sicing elit, sed do eiusmod tempor.</p>
                     <div class="offers__detail-grid-price">
                         <span>$345/Night</span>
-                        <a href="room-detail.html">Booking Now</a>
+                        <a href="room-detail.php">Booking Now</a>
                     </div>
                 </div>
                 <div class="offers__detail-rooms-slider card-detail1">
@@ -388,7 +388,7 @@
                     <p>Lorem ipsum dolor sit amet, consectetur adipi sicing elit, sed do eiusmod tempor.</p>
                     <div class="offers__detail-grid-price">
                         <span>$345/Night</span>
-                        <a href="room-detail.html">Booking Now</a>
+                        <a href="room-detail.php">Booking Now</a>
                     </div>
                 </div>
 

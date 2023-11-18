@@ -11,9 +11,9 @@
                 <h1>New Details</h1>
             </div>
             <div class="room__detail-about__section-links">
-                <a href="./index.html" class="room-detail-link-home contact-detail-link">Home</a>
+                <a href="/index.php" class="room-detail-link-home contact-detail-link">Home</a>
                 <span>|</span>
-                <a href="./contact.html" class="room-detail-link-about contact-detail-link">Blog</a>
+                <a href="/contact.php" class="room-detail-link-about contact-detail-link">Blog</a>
             </div>
         </div>
     </section>

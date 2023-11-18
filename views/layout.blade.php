@@ -21,20 +21,20 @@
                 </div>
             </div>
             <div class="header__section-links">
-                <a href="./about.php" class="section-why">About Us</a>
-                <a href="./rooms-grid.php" class="section-benefits">Rooms</a>
-                <a href="./offers.php" class="section-prices">Offers</a>
-                <a href="./contact.php" class="section-contact">Contact</a>
+                <a href="/about.php" class="section-why">About Us</a>
+                <a href="/rooms-grid.php" class="section-benefits">Rooms</a>
+                <a href="/offers.php" class="section-prices">Offers</a>
+                <a href="/contact.php" class="section-contact">Contact</a>
             </div>
             <div class="header__section-search-account">
                 <img src="./img/home/img-account.png" alt="Account icon">
                 <img src="./img/home/img-search.png" alt="Search icon">
             </div>
             <div class="header__mob-menu inactive">
-                <a href="./about.php" class="section-why">About Us</a>
-                <a href="./rooms-grid.php" class="section-benefits">Rooms</a>
-                <a href="./offers.php" class="section-prices">Offers</a>
-                <a href="./contact.php" class="section-contact">Contact</a>
+                <a href="/about.php" class="section-why">About Us</a>
+                <a href="/rooms-grid.php" class="section-benefits">Rooms</a>
+                <a href="/offers.php" class="section-prices">Offers</a>
+                <a href="/contact.php" class="section-contact">Contact</a>
             </div>  
         </header>
         <div>
