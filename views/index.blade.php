@@ -1,3 +1,11 @@
+<?php
+include '../config.php';
+print_r($servername);
+
+
+?>
+
+
 @extends('layout')
 @section('title', 'Home')
 
@@ -463,7 +471,5 @@
         <p>Idea Raised Funds</p>
     </div>
 </section>
-
-
 
 @endsection
