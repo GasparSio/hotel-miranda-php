@@ -2,7 +2,23 @@
 include '../config.php';
 print_r($servername);
 
-
+$amenityImages = [
+    '<i class="fa-solid fa-bed"></i>',
+    '<i class="fa-solid fa-wifi"></i>',
+    '<i class="fa-solid fa-car"></i>',
+    '<i class="fa-regular fa-snowflake"></i>',
+    '<i class="fa-solid fa-dumbbell"></i>',
+    '<i class="fa-solid fa-ban-smoking"></i>',
+    '<i class="fa-solid fa-martini-glass-citrus"></i>',
+    '<i class="fa-solid fa-mug-hot"></i>',
+    '<i class="fa-solid fa-person-swimming"></i>',
+    '<i class="fa-solid fa-shower"></i>',
+    '<i class="fa-solid fa-bell-concierge"></i>',
+    '<i class="fa-solid fa-hot-tub-person"></i>',
+    '<i class="fa-solid fa-lock"></i>',
+    '<i class="fa-solid fa-sun"></i>',
+    '<i class="fa-solid fa-taxi"></i>',
+];
 ?>
 
 
@@ -63,215 +79,35 @@ print_r($servername);
         <!-- Additional required wrapper -->
         <div class="swiper-wrapper">
             <!-- Slides -->
+            @foreach ($rooms as $room)
+
             <div class="swiper-slide">
                 <div class="rooms__section-amenities">
-                    <img src="../img/home/img-amenities-air-condition.png" alt="air condition image">
-                    <img src="../img/home/img-amenities-bar.png" alt="drink image">
-                    <img src="../img/home/img-amenities-bed.png" alt="bed image">
-                    <img src="../img/home/img-amenities-gim.png" alt="gim image">
-                    <img src="../img/home/img-amenities-not-smoke.png" alt="not-smoke image">
-                    <img src="../img/home/img-amenities-parking.png" alt="car image">
-                    <img src="../img/home/img-amenities-wifi.png" alt="wifi image">
+                    <?php
+                    // Mezclar y seleccionar imágenes para cada habitación
+                    shuffle($amenityImages);
+                    $selectedImages = array_slice($amenityImages, 0, 8);
+                    ?>
+                    @foreach ($selectedImages as $image)
+                    {!! $image !!}
+                    @endforeach
+
                 </div>
                 <div class="slider-images">
                     <img src="../img/home/pic-slider1.jpg" alt="Room image">
                 </div>
                 <div class="rooms__section-price">
                     <div class="rooms__section-price-info">
-                        <h1>Minimal Duplex Room</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>
+                        <h1>{{$room['room_type']}}</h1>
+                        <p>{{$room['description']}}</p>
                     </div>
                     <div class="rooms__section-price-number">
-                        <span class="price-number-big">$345</span><span class="price-number-small">/night</span>
+                        <span class="price-number-big">$ {{$room['price']}}</span><span class="price-number-small">/night</span>
                     </div>
                 </div>
             </div>
-            <div class="swiper-slide">
-                <div class="rooms__section-amenities">
-                    <img src="../img/home/img-amenities-air-condition.png" alt="air condition image">
-                    <img src="../img/home/img-amenities-bar.png" alt="drink image">
-                    <img src="../img/home/img-amenities-bed.png" alt="bed image">
-                    <img src="../img/home/img-amenities-gim.png" alt="gim image">
-                    <img src="../img/home/img-amenities-not-smoke.png" alt="not-smoke image">
-                    <img src="../img/home/img-amenities-parking.png" alt="car image">
-                    <img src="../img/home/img-amenities-wifi.png" alt="wifi image">
-                </div>
-                <div class="slider-images">
-                    <img src="../img/home/pic-slider2.jpg" alt="Room image">
-                </div>
-                <div class="rooms__section-price">
-                    <div class="rooms__section-price-info">
-                        <h1>Minimal Duplex Room</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>
-                    </div>
-                    <div class="rooms__section-price-number">
-                        <span class="price-number-big">$345</span><span class="price-number-small">/night</span>
-                    </div>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <div class="rooms__section-amenities">
-                    <img src="../img/home/img-amenities-air-condition.png" alt="air condition image">
-                    <img src="../img/home/img-amenities-bar.png" alt="drink image">
-                    <img src="../img/home/img-amenities-bed.png" alt="bed image">
-                    <img src="../img/home/img-amenities-gim.png" alt="gim image">
-                    <img src="../img/home/img-amenities-not-smoke.png" alt="not-smoke image">
-                    <img src="../img/home/img-amenities-parking.png" alt="car image">
-                    <img src="../img/home/img-amenities-wifi.png" alt="wifi image">
-                </div>
-                <div class="slider-images">
-                    <img src="../img/home/pic-slider3.jpg" alt="Room image">
-                </div>
-                <div class="rooms__section-price">
-                    <div class="rooms__section-price-info">
-                        <h1>Minimal Duplex Room</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>
-                    </div>
-                    <div class="rooms__section-price-number">
-                        <span class="price-number-big">$345</span><span class="price-number-small">/night</span>
-                    </div>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <div class="rooms__section-amenities">
-                    <img src="../img/home/img-amenities-air-condition.png" alt="air condition image">
-                    <img src="../img/home/img-amenities-bar.png" alt="drink image">
-                    <img src="../img/home/img-amenities-bed.png" alt="bed image">
-                    <img src="../img/home/img-amenities-gim.png" alt="gim image">
-                    <img src="../img/home/img-amenities-not-smoke.png" alt="not-smoke image">
-                    <img src="../img/home/img-amenities-parking.png" alt="car image">
-                    <img src="../img/home/img-amenities-wifi.png" alt="wifi image">
-                </div>
-                <div class="slider-images">
-                    <img src="../img/home/pic-slider4.jpg" alt="Room image">
-                </div>
-                <div class="rooms__section-price">
-                    <div class="rooms__section-price-info">
-                        <h1>Minimal Duplex Room</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>
-                    </div>
-                    <div class="rooms__section-price-number">
-                        <span class="price-number-big">$345</span><span class="price-number-small">/night</span>
-                    </div>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <div class="rooms__section-amenities">
-                    <img src="../img/home/img-amenities-air-condition.png" alt="air condition image">
-                    <img src="../img/home/img-amenities-bar.png" alt="drink image">
-                    <img src="../img/home/img-amenities-bed.png" alt="bed image">
-                    <img src="../img/home/img-amenities-gim.png" alt="gim image">
-                    <img src="../img/home/img-amenities-not-smoke.png" alt="not-smoke image">
-                    <img src="../img/home/img-amenities-parking.png" alt="car image">
-                    <img src="../img/home/img-amenities-wifi.png" alt="wifi image">
-                </div>
-                <div class="slider-images">
-                    <img src="../img/home/pic-slider5.jpg" alt="Room image">
-                </div>
-                <div class="rooms__section-price">
-                    <div class="rooms__section-price-info">
-                        <h1>Minimal Duplex Room</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>
-                    </div>
-                    <div class="rooms__section-price-number">
-                        <span class="price-number-big">$345</span><span class="price-number-small">/night</span>
-                    </div>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <div class="rooms__section-amenities">
-                    <img src="../img/home/img-amenities-air-condition.png" alt="air condition image">
-                    <img src="../img/home/img-amenities-bar.png" alt="drink image">
-                    <img src="../img/home/img-amenities-bed.png" alt="bed image">
-                    <img src="../img/home/img-amenities-gim.png" alt="gim image">
-                    <img src="../img/home/img-amenities-not-smoke.png" alt="not-smoke image">
-                    <img src="../img/home/img-amenities-parking.png" alt="car image">
-                    <img src="../img/home/img-amenities-wifi.png" alt="wifi image">
-                </div>
-                <div class="slider-images">
-                    <img src="../img/home/pic-slider6.jpg" alt="Room image">
-                </div>
-                <div class="rooms__section-price">
-                    <div class="rooms__section-price-info">
-                        <h1>Minimal Duplex Room</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>
-                    </div>
-                    <div class="rooms__section-price-number">
-                        <span class="price-number-big">$345</span><span class="price-number-small">/night</span>
-                    </div>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <div class="rooms__section-amenities">
-                    <img src="../img/home/img-amenities-air-condition.png" alt="air condition image">
-                    <img src="../img/home/img-amenities-bar.png" alt="drink image">
-                    <img src="../img/home/img-amenities-bed.png" alt="bed image">
-                    <img src="../img/home/img-amenities-gim.png" alt="gim image">
-                    <img src="../img/home/img-amenities-not-smoke.png" alt="not-smoke image">
-                    <img src="../img/home/img-amenities-parking.png" alt="car image">
-                    <img src="../img/home/img-amenities-wifi.png" alt="wifi image">
-                </div>
-                <div class="slider-images">
-                    <img src="../img/home/pic-slider7.jpg" alt="Room image">
-                </div>
-                <div class="rooms__section-price">
-                    <div class="rooms__section-price-info">
-                        <h1>Minimal Duplex Room</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>
-                    </div>
-                    <div class="rooms__section-price-number">
-                        <span class="price-number-big">$345</span><span class="price-number-small">/night</span>
-                    </div>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <div class="rooms__section-amenities">
-                    <img src="../img/home/img-amenities-air-condition.png" alt="air condition image">
-                    <img src="../img/home/img-amenities-bar.png" alt="drink image">
-                    <img src="../img/home/img-amenities-bed.png" alt="bed image">
-                    <img src="../img/home/img-amenities-gim.png" alt="gim image">
-                    <img src="../img/home/img-amenities-not-smoke.png" alt="not-smoke image">
-                    <img src="../img/home/img-amenities-parking.png" alt="car image">
-                    <img src="../img/home/img-amenities-wifi.png" alt="wifi image">
-                </div>
-                <div class="slider-images">
-                    <img src="../img/home/pic-slider8.jpg" alt="Room image">
-                </div>
-                <div class="rooms__section-price">
-                    <div class="rooms__section-price-info">
-                        <h1>Minimal Duplex Room</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>
-                    </div>
-                    <div class="rooms__section-price-number">
-                        <span class="price-number-big">$345</span><span class="price-number-small">/night</span>
-                    </div>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <div class="rooms__section-amenities">
-                    <img src="../img/home/img-amenities-air-condition.png" alt="air condition image">
-                    <img src="../img/home/img-amenities-bar.png" alt="drink image">
-                    <img src="../img/home/img-amenities-bed.png" alt="bed image">
-                    <img src="../img/home/img-amenities-gim.png" alt="gim image">
-                    <img src="../img/home/img-amenities-not-smoke.png" alt="not-smoke image">
-                    <img src="../img/home/img-amenities-parking.png" alt="car image">
-                    <img src="../img/home/img-amenities-wifi.png" alt="wifi image">
-                </div>
-                <div class="slider-images">
-                    <img src="../img/home/pic-slider1.jpg" alt="Room image">
-                </div>
-                <div class="rooms__section-price">
-                    <div class="rooms__section-price-info">
-                        <h1>Minimal Duplex Room</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>
-                    </div>
-                    <div class="rooms__section-price-number">
-                        <span class="price-number-big">$345</span><span class="price-number-small">/night</span>
-                    </div>
-                </div>
-            </div>
+            @endforeach
         </div>
-        <!-- If we need navigation buttons -->
         <div class="swiper-button-prev"><img src="../img/home/img-slider-left-arrow.png" alt="left arrow"></div>
         <div class="swiper-button-next"><img src="../img/home/img-slider-right-arrow.png" alt="right arrow"></div>
     </div>
