@@ -1,3 +1,27 @@
+<?php
+include '../config.php';
+
+$amenityImages = [
+    '<i class="fa-solid fa-bed"></i>',
+    '<i class="fa-solid fa-wifi"></i>',
+    '<i class="fa-solid fa-car"></i>',
+    '<i class="fa-regular fa-snowflake"></i>',
+    '<i class="fa-solid fa-dumbbell"></i>',
+    '<i class="fa-solid fa-ban-smoking"></i>',
+    '<i class="fa-solid fa-martini-glass-citrus"></i>',
+    '<i class="fa-solid fa-mug-hot"></i>',
+    '<i class="fa-solid fa-person-swimming"></i>',
+    '<i class="fa-solid fa-shower"></i>',
+    '<i class="fa-solid fa-bell-concierge"></i>',
+    '<i class="fa-solid fa-hot-tub-person"></i>',
+    '<i class="fa-solid fa-lock"></i>',
+    '<i class="fa-solid fa-sun"></i>',
+    '<i class="fa-solid fa-taxi"></i>',
+];
+?>
+
+
+
 @extends('layout')
 @section('title', 'Rooms Grid')
 
@@ -19,150 +43,28 @@
 </section>
 <section class="rooms__slider__section">
     <div class="rooms-slider-container">
+        @foreach ($rooms as $room)
         <div class="rooms-slider">
             <img src="../img/rooms-grid/room-1.avif" alt="room 1">
-            <div class="rooms__grid-section-amenities">
-                <img src="../img/home/img-amenities-air-condition.png" alt="air condition image">
-                <img src="../img/home/img-amenities-bar.png" alt="drink image">
-                <img src="../img/home/img-amenities-bed.png" alt="bed image">
-                <img src="../img/home/img-amenities-gim.png" alt="gim image">
-                <img src="../img/home/img-amenities-not-smoke.png" alt="not-smoke image">
-                <img src="../img/home/img-amenities-parking.png" alt="car image">
-                <img src="../img/home/img-amenities-wifi.png" alt="wifi image">
+            <div class="rooms__section-amenities">
+                <?php
+                // Mezclar y seleccionar imágenes para cada habitación
+                shuffle($amenityImages);
+                $selectedImages = array_slice($amenityImages, 0, 8);
+                ?>
+                @foreach ($selectedImages as $image)
+                {!! $image !!}
+                @endforeach
+
             </div>
-            <h3>Minimal Duplex Room</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipi sicing elit, sed do eiusmod tempor.</p>
+            <h3>{{$room['room_type']}}</h3>
+            <p>{{$room['description']}}</p>
             <div class="rooms__grid-price">
-                <span>$345/Night</span>
+                <span>$ {{$room['price']}} /Night</span>
                 <a href="./room-detail.php">Booking Now</a>
             </div>
         </div>
-        <div class="rooms-slider">
-            <img src="../img/rooms-grid/room-2.avif" alt="room 2">
-            <div class="rooms__grid-section-amenities">
-                <img src="../img/home/img-amenities-air-condition.png" alt="air condition image">
-                <img src="../img/home/img-amenities-bar.png" alt="drink image">
-                <img src="../img/home/img-amenities-bed.png" alt="bed image">
-                <img src="../img/home/img-amenities-gim.png" alt="gim image">
-                <img src="../img/home/img-amenities-not-smoke.png" alt="not-smoke image">
-                <img src="../img/home/img-amenities-parking.png" alt="car image">
-                <img src="../img/home/img-amenities-wifi.png" alt="wifi image">
-            </div>
-            <h3>Minimal Duplex Room</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipi sicing elit, sed do eiusmod tempor.</p>
-            <div class="rooms__grid-price">
-                <span>$345/Night</span>
-                <a href="./room-detail.php">Booking Now</a>
-            </div>
-        </div>
-        <div class="rooms-slider">
-            <img src="../img/rooms-grid/room-3.avif" alt="room 3">
-            <div class="rooms__grid-section-amenities">
-                <img src="../img/home/img-amenities-air-condition.png" alt="air condition image">
-                <img src="../img/home/img-amenities-bar.png" alt="drink image">
-                <img src="../img/home/img-amenities-bed.png" alt="bed image">
-                <img src="../img/home/img-amenities-gim.png" alt="gim image">
-                <img src="../img/home/img-amenities-not-smoke.png" alt="not-smoke image">
-                <img src="../img/home/img-amenities-parking.png" alt="car image">
-                <img src="../img/home/img-amenities-wifi.png" alt="wifi image">
-            </div>
-            <h3>Minimal Duplex Room</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipi sicing elit, sed do eiusmod tempor.</p>
-            <div class="rooms__grid-price">
-                <span>$345/Night</span>
-                <a href="./room-detail.php">Booking Now</a>
-            </div>
-        </div>
-        <div class="rooms-slider">
-            <img src="../img/rooms-grid/room-4.avif" alt="room 4">
-            <div class="rooms__grid-section-amenities">
-                <img src="../img/home/img-amenities-air-condition.png" alt="air condition image">
-                <img src="../img/home/img-amenities-bar.png" alt="drink image">
-                <img src="../img/home/img-amenities-bed.png" alt="bed image">
-                <img src="../img/home/img-amenities-gim.png" alt="gim image">
-                <img src="../img/home/img-amenities-not-smoke.png" alt="not-smoke image">
-                <img src="../img/home/img-amenities-parking.png" alt="car image">
-                <img src="../img/home/img-amenities-wifi.png" alt="wifi image">
-            </div>
-            <h3>Minimal Duplex Room</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipi sicing elit, sed do eiusmod tempor.</p>
-            <div class="rooms__grid-price">
-                <span>$345/Night</span>
-                <a href="./room-detail.php">Booking Now</a>
-            </div>
-        </div>
-        <div class="rooms-slider">
-            <img src="../img/rooms-grid/room-5.avif" alt="room 5">
-            <div class="rooms__grid-section-amenities">
-                <img src="../img/home/img-amenities-air-condition.png" alt="air condition image">
-                <img src="../img/home/img-amenities-bar.png" alt="drink image">
-                <img src="../img/home/img-amenities-bed.png" alt="bed image">
-                <img src="../img/home/img-amenities-gim.png" alt="gim image">
-                <img src="../img/home/img-amenities-not-smoke.png" alt="not-smoke image">
-                <img src="../img/home/img-amenities-parking.png" alt="car image">
-                <img src="../img/home/img-amenities-wifi.png" alt="wifi image">
-            </div>
-            <h3>Minimal Duplex Room</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipi sicing elit, sed do eiusmod tempor.</p>
-            <div class="rooms__grid-price">
-                <span>$345/Night</span>
-                <a href="./room-detail.php">Booking Now</a>
-            </div>
-        </div>
-        <div class="rooms-slider">
-            <img src="../img/rooms-grid/room-6.avif" alt="room 6">
-            <div class="rooms__grid-section-amenities">
-                <img src="../img/home/img-amenities-air-condition.png" alt="air condition image">
-                <img src="../img/home/img-amenities-bar.png" alt="drink image">
-                <img src="../img/home/img-amenities-bed.png" alt="bed image">
-                <img src="../img/home/img-amenities-gim.png" alt="gim image">
-                <img src="../img/home/img-amenities-not-smoke.png" alt="not-smoke image">
-                <img src="../img/home/img-amenities-parking.png" alt="car image">
-                <img src="../img/home/img-amenities-wifi.png" alt="wifi image">
-            </div>
-            <h3>Minimal Duplex Room</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipi sicing elit, sed do eiusmod tempor.</p>
-            <div class="rooms__grid-price">
-                <span>$345/Night</span>
-                <a href="./room-detail.php">Booking Now</a>
-            </div>
-        </div>
-        <div class="rooms-slider">
-            <img src="../img/rooms-grid/room-7.avif" alt="room 7">
-            <div class="rooms__grid-section-amenities">
-                <img src="../img/home/img-amenities-air-condition.png" alt="air condition image">
-                <img src="../img/home/img-amenities-bar.png" alt="drink image">
-                <img src="../img/home/img-amenities-bed.png" alt="bed image">
-                <img src="../img/home/img-amenities-gim.png" alt="gim image">
-                <img src="../img/home/img-amenities-not-smoke.png" alt="not-smoke image">
-                <img src="../img/home/img-amenities-parking.png" alt="car image">
-                <img src="../img/home/img-amenities-wifi.png" alt="wifi image">
-            </div>
-            <h3>Minimal Duplex Room</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipi sicing elit, sed do eiusmod tempor.</p>
-            <div class="rooms__grid-price">
-                <span>$345/Night</span>
-                <a href="./room-detail.php">Booking Now</a>
-            </div>
-        </div>
-        <div class="rooms-slider">
-            <img src="../img/rooms-grid/room-8.avif" alt="room 8">
-            <div class="rooms__grid-section-amenities">
-                <img src="../img/home/img-amenities-air-condition.png" alt="air condition image">
-                <img src="../img/home/img-amenities-bar.png" alt="drink image">
-                <img src="../img/home/img-amenities-bed.png" alt="bed image">
-                <img src="../img/home/img-amenities-gim.png" alt="gim image">
-                <img src="../img/home/img-amenities-not-smoke.png" alt="not-smoke image">
-                <img src="../img/home/img-amenities-parking.png" alt="car image">
-                <img src="../img/home/img-amenities-wifi.png" alt="wifi image">
-            </div>
-            <h3>Minimal Duplex Room</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipi sicing elit, sed do eiusmod tempor.</p>
-            <div class="rooms__grid-price">
-                <span>$345/Night</span>
-                <a href="./room-detail.php">Booking Now</a>
-            </div>
-        </div>
+        @endforeach
     </div>
     <div class="rooms-pagination">
         <button class="rooms-prev"><img src="../img/rooms-grid/prev-arrow.png" alt=""></button>

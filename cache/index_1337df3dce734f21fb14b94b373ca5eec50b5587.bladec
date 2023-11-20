@@ -1,6 +1,5 @@
 <?php
 include '../config.php';
-print_r($servername);
 
 $amenityImages = [
  '<i class="fa-solid fa-bed"></i>',
@@ -20,7 +19,6 @@ $amenityImages = [
  '<i class="fa-solid fa-taxi"></i>',
 ];
 ?>
-
 
 <?php $_shouldextend[1]=1; ?>
 <?php $this->startSection('title', 'Home'); ?>

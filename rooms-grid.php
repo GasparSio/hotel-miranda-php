@@ -1,18 +1,14 @@
 <?php
-require 'lib/BladeOne.php';
+require_once('./setup.php');
+require_once("config.php");
 
-use eftec\bladeone\BladeOne;
 
-$views = 'views'; // Directorio donde se encuentran tus plantillas Blade.
-$compiledFolder = 'cache'; // Directorio donde se almacenarán las vistas compiladas.
+$sql = "SELECT * FROM room"; // Ejecutar una consulta y obtener los resultados
+$result = $conn->query($sql);
 
-$blade = new BladeOne($views, $compiledFolder, BladeOne::MODE_AUTO);
 
-// Pasar datos a la vista si es necesario
-$data = [
-    'title' => 'Rooms Grid',
-];
+$rooms = $result->fetch_all(MYSQLI_ASSOC);
 
-// Renderiza la vista principal (index.blade.php)
-echo $blade->run('rooms-grid', $data);
-?>
+echo $blade->run('rooms-grid', ['rooms' => $rooms]);
+
+$conn->close();
