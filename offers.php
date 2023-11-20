@@ -1,18 +1,14 @@
 <?php
-require 'lib/BladeOne.php';
+require_once('./setup.php');
+require_once("config.php");
 
-use eftec\bladeone\BladeOne;
 
-$views = 'views'; // Directorio donde se encuentran tus plantillas Blade.
-$compiledFolder = 'cache'; // Directorio donde se almacenarán las vistas compiladas.
+$sql = "select * from room WHERE offer_price != 0 AND discount > 0 limit 8";
+$result = $conn->query($sql);
 
-$blade = new BladeOne($views, $compiledFolder, BladeOne::MODE_AUTO);
 
-// Pasar datos a la vista si es necesario
-$data = [
-    'title' => 'Offers',
-];
+$rooms = $result->fetch_all(MYSQLI_ASSOC);
 
-// Renderiza la vista principal (index.blade.php)
-echo $blade->run('offers', $data);
-?>
+echo $blade->run('offers', ['rooms' => $rooms]);
+
+$conn->close();
