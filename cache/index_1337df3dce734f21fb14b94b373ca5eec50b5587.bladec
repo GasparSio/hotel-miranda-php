@@ -18,6 +18,17 @@ $amenityImages = [
  '<i class="fa-solid fa-sun"></i>',
  '<i class="fa-solid fa-taxi"></i>',
 ];
+$arrayImages = [
+ '<img src="../img/home/pic-slider1.jpg" alt="Room image">',
+ '<img src="../img/home/pic-slider2.jpg" alt="Room image">',
+ '<img src="../img/home/pic-slider3.jpg" alt="Room image">',
+ '<img src="../img/home/pic-slider4.jpg" alt="Room image">',
+ '<img src="../img/home/pic-slider5.jpg" alt="Room image">',
+ '<img src="../img/home/pic-slider6.jpg" alt="Room image">',
+ '<img src="../img/home/pic-slider7.jpg" alt="Room image">',
+ '<img src="../img/home/pic-slider8.jpg" alt="Room image">',
+ '<img src="../img/home/pic-slider9.jpg" alt="Room image">',
+];
 ?>
 
 <?php $_shouldextend[1]=1; ?>
@@ -95,7 +106,11 @@ $amenityImages = [
 
  </div>
  <div class="slider-images">
- <img src="../img/home/pic-slider1.jpg" alt="Room image">
+ <?php
+ $indiceAleatorio = array_rand($arrayImages);
+ $imagenAleatoria = $arrayImages[$indiceAleatorio];
+ ?>
+ <?php echo $imagenAleatoria; ?>
  </div>
  <div class="rooms__section-price">
  <div class="rooms__section-price-info">

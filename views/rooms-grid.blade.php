@@ -18,6 +18,17 @@ $amenityImages = [
     '<i class="fa-solid fa-sun"></i>',
     '<i class="fa-solid fa-taxi"></i>',
 ];
+$photosImages = [
+    '<img src="../img/home/pic-slider1.jpg" alt="Room image">',
+    '<img src="../img/home/pic-slider2.jpg" alt="Room image">',
+    '<img src="../img/home/pic-slider3.jpg" alt="Room image">',
+    '<img src="../img/home/pic-slider4.jpg" alt="Room image">',
+    '<img src="../img/home/pic-slider5.jpg" alt="Room image">',
+    '<img src="../img/home/pic-slider6.jpg" alt="Room image">',
+    '<img src="../img/home/pic-slider7.jpg" alt="Room image">',
+    '<img src="../img/home/pic-slider8.jpg" alt="Room image">',
+    '<img src="../img/home/pic-slider9.jpg" alt="Room image">',
+];
 ?>
 
 
@@ -45,7 +56,11 @@ $amenityImages = [
     <div class="rooms-slider-container">
         @foreach ($rooms as $room)
         <div class="rooms-slider">
-            <img src="../img/rooms-grid/room-1.avif" alt="room 1">
+            <?php
+            $indiceAleatorio = array_rand($photosImages);
+            $imagenAleatoria = $photosImages[$indiceAleatorio];
+            ?>
+            <?php echo $imagenAleatoria; ?>
             <div class="rooms__section-amenities">
                 <?php
                 // Mezclar y seleccionar imágenes para cada habitación

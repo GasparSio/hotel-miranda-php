@@ -2334,10 +2334,11 @@
     flex-wrap: wrap;
     gap: 20px;
     flex-direction: row;
+    width: 100%;
   }
   .rooms__slider__section {
     background-color: #F9F9F9;
-    max-width: 1024px;
+    max-width: 1200px;
     margin: auto;
   }
   .rooms-slider {
