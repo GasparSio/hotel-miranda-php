@@ -106,6 +106,10 @@
   color: #a47a22;
 }
 
+.header__mob-menu a.active {
+  color: #a47a22;
+}
+
 .inactive {
   display: none;
 }
@@ -158,6 +162,9 @@
   .header__section-links a:hover {
     color: #a47a22;
     transform: scale(1.05);
+  }
+  .header__section-links a.active {
+    color: #a47a22;
   }
   .header__section-search-account {
     right: 25px;
@@ -2361,7 +2368,7 @@
     background-color: #FFFFFF;
   }
   .rooms__grid-price a:hover {
-    background-color: #9b7d21;
+    background-color: #BEAD8E;
     color: white;
     height: 20px;
     display: flex;

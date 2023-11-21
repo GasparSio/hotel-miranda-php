@@ -98,6 +98,9 @@
         color: #a47a22;
     }
 }
+.header__mob-menu a.active{
+    color: #a47a22;
+}
 .inactive{
     display: none;
 }
@@ -151,6 +154,9 @@
             color: #a47a22;
             transform: scale(1.05);
         }
+    }
+    .header__section-links a.active{
+        color: #a47a22;
     }
     .header__section-search-account{
         right: 25px;

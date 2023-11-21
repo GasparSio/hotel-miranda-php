@@ -17,13 +17,13 @@ function cerrarHeader() {
 const clickHeaderSecIcon = headerSecIcon.addEventListener('click', () => {
     mobImg.classList.toggle('inactive');
     crossIcon.classList.toggle('inactive');
-    
+
     const hambInact = mobImg.classList.contains('inactive');
     const crossInact = crossIcon.classList.contains('inactive');
 
-    if(hambInact){
+    if (hambInact) {
         expandirHeader()
-    }else{
+    } else {
         cerrarHeader()
     }
 })
@@ -59,4 +59,25 @@ function toggleHeader() {
     } else {
         header.classList.remove('show');
     }
+}
+
+
+//Cambiar estilos cuando la navegacion cambia de una ruta a otra
+// Obtén la URL de la página actual
+var currentPage = window.location.pathname;
+
+// Mapea la URL de la página actual a la etiqueta <a> correspondiente
+var pageToLinkMap = {
+    '/about.php': 'aboutLink',
+    '/rooms-grid.php': 'roomsLink',
+    '/offers.php': 'offersLink',
+    '/contact.php': 'contactLink'
+};
+
+// Obtén el ID de la etiqueta <a> correspondiente a la página actual
+var currentLinkId = pageToLinkMap[currentPage];
+
+// Agrega la clase 'active' a la etiqueta <a> de la página actual
+if (currentLinkId) {
+    document.getElementById(currentLinkId).classList.add('active');
 }
