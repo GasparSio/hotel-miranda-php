@@ -91,6 +91,11 @@
         font-weight: $weight-600;
         font-size: 16px;
         color: $letterColor-black;
+        transition: transform;
+    }
+    a:hover{
+        transform: scale(1.05);
+        color: #a47a22;
     }
 }
 .inactive{
@@ -140,6 +145,11 @@
             font-family: $archivo-font;
             font-weight: $weight-600;
             font-size: 16px;
+            transition: transform;
+        }
+        a:hover{
+            color: #a47a22;
+            transform: scale(1.05);
         }
     }
     .header__section-search-account{
