@@ -1,18 +1,39 @@
 <?php
-require 'lib/BladeOne.php';
+require_once('./setup.php');
+require_once("config.php");
 
-use eftec\bladeone\BladeOne;
+$successForm = false;
 
-$views = 'views'; // Directorio donde se encuentran tus plantillas Blade.
-$compiledFolder = 'cache'; // Directorio donde se almacenarán las vistas compiladas.
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Obtener datos del formulario
+    $fullName = htmlspecialchars($_POST["input1"]);
+    $phoneNumber = htmlspecialchars($_POST["input2"]);
+    $email = htmlspecialchars($_POST["input3"]);
+    $subjectOfReview = htmlspecialchars($_POST["input4"]);
+    $reviewBody = htmlspecialchars($_POST["input5"]);
 
-$blade = new BladeOne($views, $compiledFolder, BladeOne::MODE_AUTO);
+    // Preparar la consulta SQL
+    $sql = "INSERT INTO contact (full_name, email, phone_number, subject_of_review, review_body, dateTime, status) VALUES (?, ?, ?, ?, ?, CURDATE(), 'Not Archived')";
 
-// Pasar datos a la vista si es necesario
-$data = [
-    'title' => 'Contact',
-];
+    // Preparar la declaración
+    $stmt = $conn->prepare($sql);
 
-// Renderiza la vista principal (index.blade.php)
-echo $blade->run('contact', $data);
-?>
+    // Vincular parámetros
+    $stmt->bind_param("sssss", $fullName, $email, $phoneNumber, $subjectOfReview, $reviewBody);
+
+    // Ejecutar la declaración
+    if ($stmt->execute()) {
+        // Éxito en la inserción
+        $successForm = true;
+    } else {
+        // Error en la inserción
+        $successForm = "Error: " . $stmt->error;
+    }
+
+    // Cerrar la conexión
+    $stmt->close();
+}
+// Cerrar la conexión (si no se ha cerrado ya)
+
+echo $blade->run('contact', ['successForm' => $successForm]);
+$conn->close();

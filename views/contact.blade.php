@@ -53,7 +53,8 @@
     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3037.1314070555613!2d-3.7172119244066213!3d40.42808905494852!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd422930bf75e89b%3A0x37bfddc02cf008f4!2sOxygen%20Workspace!5e0!3m2!1sen!2ses!4v1695389644229!5m2!1sen!2ses" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 </section>
 <section class="contact__section-form">
-    <form action="#" method="post" class="contact__form-container">
+
+    <form action="../contact.php" method="POST" class="contact__form-container" id="contact-form">
         <div class="form-input contact__form-name">
             <label for="input1"></label>
             <img src="../img/contact/img-input-1.png" alt="image contact">
@@ -72,19 +73,23 @@
         <div class="form-input contact__form-subject">
             <label for="input4"></label>
             <img src="../img/contact/img-input-4.png" alt="image contact">
-            <input type="text" id="input4" name="input4" placeholder="Enter subject">
+            <input type="text" id="input4" name="input4" placeholder="Enter subject" required>
         </div>
         <div class="form-input contact__form-message">
             <img src="../img/contact/img-input-5.png" alt="image contact">
-            <textarea placeholder="Enter message"></textarea>
+            <textarea name="input5" placeholder="Enter message" id="input5" required></textarea>
         </div>
         <div class="contact__form-button">
             <input type="submit" value="Send">
         </div>
-
     </form>
 </section>
 
-
-
 @endsection
+
+
+@if(!empty($successForm))
+<script>
+    alert('hola')
+</script>
+@endif

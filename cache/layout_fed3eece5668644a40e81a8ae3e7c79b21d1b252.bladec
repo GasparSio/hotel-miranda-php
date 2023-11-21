@@ -139,6 +139,12 @@
  <script src="../js/offers.js"></script>
  <script src="../js/room-detail.js"></script>
  <script src="../js/rooms-grid.js"></script>
+ <script src="../js/contact.js"></script>
+ <script>
+ if (window.history.replaceState) {
+ window.history.replaceState(null, null, window.location.href);
+ }
+ </script>
 </body>
 
 </html>
