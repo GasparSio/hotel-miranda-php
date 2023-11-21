@@ -3194,7 +3194,7 @@ body {
   margin-bottom: 10px;
 }
 .offers__room-amenities-info img {
-  padding-right: 2px;
+  padding-right: 4%;
 }
 .offers__room-amenities-info span {
   font-family: "Roboto";
@@ -3240,6 +3240,10 @@ body {
   }
   .offers__room-amenities-info {
     margin-bottom: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
   }
   .offers__room-amenities-info span {
     font-size: 11px;
