@@ -160,7 +160,6 @@
     }
     .offers__detail-cards-container{
         display: flex;
-        justify-content: space-evenly;
     }
     .offers__detail-line{
         max-width: 1024px;
@@ -172,7 +171,13 @@
         display: none;
     }
     .offers__detail-slider-container{
-        margin: auto;
+        overflow: scroll;
+    }
+    .offers__detail-slider-container::-webkit-scrollbar{
+        height: 7px;
+    }
+    .offers__detail-slider-container::-webkit-scrollbar-thumb{
+        background-color: #e8e4e4;
     }
     .offers__detail-rooms-slider{
         flex: 0 0 300px;

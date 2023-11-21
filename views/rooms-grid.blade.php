@@ -70,7 +70,6 @@ $photosImages = [
                 @foreach ($selectedImages as $image)
                 {!! $image !!}
                 @endforeach
-
             </div>
             <h3>{{$room['room_type']}}</h3>
             <p>{{$room['description']}}</p>

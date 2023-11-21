@@ -150,8 +150,7 @@ $arrayImages = [
     <div class="offers__detail-line"></div>
     <div class="offers__detail-slider-container">
         <div class="offers__detail-cards-container">
-
-            @foreach($rooms as $room)
+            <!-- @foreach($rooms as $room) -->
             <div class="offers__detail-rooms-slider card-detail1">
                 <img src="../img/rooms-grid/room-8.avif" alt="room 1">
                 <div class="offers__detail-section-amenities">
@@ -171,7 +170,7 @@ $arrayImages = [
                     <a href="room-detail.php">Booking Now</a>
                 </div>
             </div>
-            @endforeach
+            <!-- @endforeach -->
         </div>
         <button class="prev-btn-detail-offers" id="prevBtn"><img src="../img/home/img-slider-left-arrow.png" alt="left arrow"></button>
         <button class="next-btn-detail-offers" id="nextBtn"><img src="../img/home/img-slider-right-arrow.png" alt="right arrow"></button>
