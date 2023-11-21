@@ -40,7 +40,7 @@
 }
 .rooms__grid-price{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     width: 80%;
     margin: auto;
     span{
@@ -58,6 +58,12 @@
         color: #BDBDBD;
         border: none;
         background: transparent;
+        transition: transform;
+        text-decoration: none;
+    }
+    a:hover{
+        transform: scale(1.05);
+
     }
 }
 .rooms-pagination {
@@ -125,6 +131,19 @@
     }
     .rooms-slider{
         max-width: 300px;
+        height: 395px;
         background-color: $background-white;
+    }
+    .rooms__grid-price{
+        a:hover{
+            background-color: #9b7d21;
+            color: white;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 2px;
+            width: 114px;
+        }
     }
 }

@@ -29,6 +29,20 @@ $arrayImages = [
     '<img src="../img/home/pic-slider8.jpg" alt="Room image">',
     '<img src="../img/home/pic-slider9.jpg" alt="Room image">',
 ];
+$amenitiesData = [
+    ['url' => '../img/room-detail/img-air-cond.png', 'description' => 'Air conditioner'],
+    ['url' => '../img/room-detail/img-breakfast.png', 'description' => 'Breakfast'],
+    ['url' => '../img/room-detail/img-cleaning.png', 'description' => 'Cleaning'],
+    ['url' => '../img/room-detail/img-grocery.png', 'description' => 'Grocery'],
+    ['url' => '../img/room-detail/img-shop near.png', 'description' => 'Shop near'],
+    ['url' => '../img/room-detail/img-online.png', 'description' => '24/7 Online Support'],
+    ['url' => '../img/room-detail/img-wifi.png', 'description' => 'High speed WiFi'],
+    ['url' => '../img/room-detail/img-kitchen.png', 'description' => 'Kitchen'],
+    ['url' => '../img/room-detail/img-shower.png', 'description' => 'Shower'],
+    ['url' => '../img/room-detail/img-bad.png', 'description' => 'Single bed'],
+    ['url' => '../img/room-detail/img-towels.png', 'description' => 'Towels'],
+
+];
 ?>
 
 
@@ -89,7 +103,16 @@ $arrayImages = [
             <p>{{$room['description']}}</p>
         </div>
         <div class="offers__room-amenities-container">
+            @php
+            $randomAmenities = array_rand($amenitiesData, 8);
+            @endphp
+            @foreach ($randomAmenities as $index)
             <div class="offers__room-amenities-info">
+                <img src="{{ $amenitiesData[$index]['url'] }}" alt="image amenities">
+                <span>{{ $amenitiesData[$index]['description'] }}</span>
+            </div>
+            @endforeach
+            <!-- <div class="offers__room-amenities-info">
                 <img src="../img/room-detail/img-air-cond.png" alt="image amenities">
                 <span>Air conditioner</span>
             </div>
@@ -132,7 +155,7 @@ $arrayImages = [
             <div class="offers__room-amenities-info">
                 <img src="../img/room-detail/img-towels.png" alt="image amenities">
                 <span>Towels</span>
-            </div>
+            </div> -->
         </div>
         <div class="offers__room-button-container">
             <a href="room-detail.php">Book Now</a>
@@ -150,7 +173,8 @@ $arrayImages = [
     <div class="offers__detail-line"></div>
     <div class="offers__detail-slider-container">
         <div class="offers__detail-cards-container">
-            <!-- @foreach($rooms as $room) -->
+
+            @foreach($rooms as $room)
             <div class="offers__detail-rooms-slider card-detail1">
                 <img src="../img/rooms-grid/room-8.avif" alt="room 1">
                 <div class="offers__detail-section-amenities">
@@ -170,7 +194,7 @@ $arrayImages = [
                     <a href="room-detail.php">Booking Now</a>
                 </div>
             </div>
-            <!-- @endforeach -->
+            @endforeach
         </div>
         <button class="prev-btn-detail-offers" id="prevBtn"><img src="../img/home/img-slider-left-arrow.png" alt="left arrow"></button>
         <button class="next-btn-detail-offers" id="nextBtn"><img src="../img/home/img-slider-right-arrow.png" alt="right arrow"></button>
