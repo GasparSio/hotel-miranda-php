@@ -37,3 +37,4 @@ echo $blade->run('contact', ['notification' => $_SESSION['notification'] ?? null
 $_SESSION['notification'] = null;
 
 $conn->close();
+session_destroy();
