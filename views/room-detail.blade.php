@@ -1,7 +1,7 @@
 @extends('layout')
 @section('title', 'Room Detail')
-
 @section('content')
+
 
 <section class="room__detail-about__section">
     <div class="taketour_section-header-rect"></div>
@@ -21,11 +21,10 @@
     <div class="room__detail-availability-container">
         <div class="room__detail-title-price-container">
             <div class="room__detail-title">
-                <h2>Double Bed</h2>
-                <h1>Luxury Double Bed</h1>
+                <h1>{{$room['room_type']}}</h1>
             </div>
             <div class="room__detail-price">
-                <span class="detail-price">$345</span>
+                <span class="detail-price">${{$room['price']}}</span>
                 <span class="detail-night">/Night</span>
             </div>
         </div>
@@ -35,12 +34,11 @@
         <div class="room__detail-form-container">
             <h1>Check Availability</h1>
             <form action="/submit" method="post">
-
                 <label for="check-in">Check in</label>
-                <input type="date" id="check-in" name="check-in" required>
+                <input type="date" id="check-in" name="check-in" class="room-detail-checkininput" required>
 
                 <label for="check-out">Check out</label>
-                <input type="date" id="check-out" name="check-out" required>
+                <input type="date" id="check-out" name="check-out" class="room-detail-checkoutinput" required>
 
                 <label for="fullname">Full Name</label>
                 <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required>

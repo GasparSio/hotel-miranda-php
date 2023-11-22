@@ -39,6 +39,10 @@
   font-size: 25px;
   font-family: "Archivo";
 }
+.icon_section-H span a {
+  text-decoration: none;
+  color: black;
+}
 
 .icon_section-HM {
   display: flex;
@@ -139,6 +143,10 @@
   }
   .icon_section-H span {
     width: 23px;
+  }
+  .icon_section-H span a {
+    text-decoration: none;
+    color: black;
   }
   .section__HM-hotel {
     font-size: 19px;
@@ -624,7 +632,6 @@
 }
 
 .input-calendar[type=date]::-webkit-calendar-picker-indicator {
-  background-image: url("../../img/home/icon-calendar.png") no-repeat center;
   background-size: 20px 20px;
   height: 20px;
   width: 100%;
@@ -2287,7 +2294,7 @@
   line-height: 17.41px;
   color: #BEAD8E;
 }
-.rooms__grid-price a {
+.rooms__grid-price form button {
   font-family: Archivo;
   font-weight: 700;
   font-size: 16px;
@@ -2298,8 +2305,16 @@
   transition: transform;
   text-decoration: none;
 }
-.rooms__grid-price a:hover {
+.rooms__grid-price form button:hover {
   transform: scale(1.05);
+  background-color: #BEAD8E;
+  color: white;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 2px;
+  width: 114px;
 }
 
 .rooms-pagination {
@@ -2367,7 +2382,7 @@
     height: 395px;
     background-color: #FFFFFF;
   }
-  .rooms__grid-price a:hover {
+  .rooms__grid-price form button:hover {
     background-color: #BEAD8E;
     color: white;
     height: 20px;
@@ -2594,6 +2609,18 @@
   padding-left: 7px;
 }
 
+.room-detail-checkininput[type=date]::-webkit-calendar-picker-indicator {
+  width: 100%;
+  background-position-x: 55%;
+  position: absolute;
+}
+
+.room-detail-checkoutinput[type=date]::-webkit-calendar-picker-indicator {
+  width: 100%;
+  background-position-x: 55%;
+  position: absolute;
+}
+
 .room__detail-form-container form .room__detail-form-button {
   width: 70%;
   height: 60px;
@@ -2635,6 +2662,7 @@
     border-radius: 0 0 3px 0;
   }
   .room__detail-price {
+    padding-left: 25px;
     margin-top: 0;
   }
   .room__detail-title h1 {

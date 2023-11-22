@@ -1,18 +1,18 @@
 <?php
-require 'lib/BladeOne.php';
+require_once('./setup.php');
+require_once("config.php");
 
-use eftec\bladeone\BladeOne;
+if (isset($_GET["roomId"])) {
+    $roomId = htmlspecialchars($_GET["roomId"]);
+    // Utiliza parámetros preparados para evitar SQL injection
+    $sql = "SELECT * FROM room WHERE id = $roomId";
+}
 
-$views = 'views'; // Directorio donde se encuentran tus plantillas Blade.
-$compiledFolder = 'cache'; // Directorio donde se almacenarán las vistas compiladas.
 
-$blade = new BladeOne($views, $compiledFolder, BladeOne::MODE_AUTO);
+$result = $conn->query($sql);
 
-// Pasar datos a la vista si es necesario
-$data = [
-    'title' => 'Room Detail',
-];
+$rooms = $result->fetch_assoc();
 
-// Renderiza la vista principal (index.blade.php)
-echo $blade->run('room-detail', $data);
-?>
+echo $blade->run('room-detail', ['room' => $rooms]);
+
+$conn->close();
