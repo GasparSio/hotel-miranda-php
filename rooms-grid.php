@@ -1,4 +1,5 @@
 <?php
+session_start();
 require_once('./setup.php');
 require_once("config.php");
 
@@ -6,7 +7,10 @@ require_once("config.php");
 
 if (isset($_GET["availdatein"]) && isset($_GET["availdateout"])) {
     $checkin = htmlspecialchars($_GET["availdatein"]);
+    $_SESSION['availdatein'] = $checkin;
     $checkout = htmlspecialchars($_GET["availdateout"]);
+    $_SESSION['availdateout'] = $checkout;
+
     $sql =
         "SELECT r.*
             FROM room r
