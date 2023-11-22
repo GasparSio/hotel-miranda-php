@@ -108,6 +108,16 @@
         }
     }
 }
+.room-detail-checkininput[type="date"]::-webkit-calendar-picker-indicator{
+    width: 100%;
+    background-position-x: 55%;
+    position: absolute;
+} 
+.room-detail-checkoutinput[type="date"]::-webkit-calendar-picker-indicator{
+    width: 100%;
+    background-position-x: 55%;
+    position: absolute;
+}
 .room__detail-form-container form .room__detail-form-button{
     width: 70%;
     height: 60px;
@@ -150,6 +160,7 @@
         border-radius: 0 0 3px 0;
     }
     .room__detail-price{
+        padding-left: 25px;
         margin-top: 0;
     }
     .room__detail-title{

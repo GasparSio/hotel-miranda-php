@@ -36,6 +36,10 @@
         font-weight: 600;
         font-size: 25px;
         font-family: 'Archivo';
+        a{
+            text-decoration: none;
+            color: black;
+        }
     }
 }
 .icon_section-HM{
@@ -130,6 +134,10 @@
         height: 80px;
         span{
             width: 23px;
+            a{
+                text-decoration: none;
+                color: black;
+            }
         }
     }
     .section__HM-hotel{
