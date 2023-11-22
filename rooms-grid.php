@@ -4,10 +4,6 @@ require_once("config.php");
 
 
 
-
-
-
-
 if (isset($_GET["availdatein"]) && isset($_GET["availdateout"])) {
     $checkin = htmlspecialchars($_GET["availdatein"]);
     $checkout = htmlspecialchars($_GET["availdateout"]);

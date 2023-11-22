@@ -23,7 +23,7 @@
         </div>
         <div class="header__section-icon">
             <div class="icon_section-H">
-                <span>H</span>
+                <a href="../index.php"><span>H</span></a>
             </div>
             <div class="icon_section-HM">
                 <span class="section__HM-hotel">HOTEL</span>

@@ -75,7 +75,10 @@ $photosImages = [
             <p>{{$room['description']}}</p>
             <div class="rooms__grid-price">
                 <span>$ {{$room['price']}} /Night</span>
-                <a href="./room-detail.php">Booking Now</a>
+                <form action="../room-detail.php" method="GET">
+                    <input type="hidden" name="roomId" value="{{$room['id']}}">
+                    <button type="submit">Booking Now</button>
+                </form>
             </div>
         </div>
         @endforeach
