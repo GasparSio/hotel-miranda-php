@@ -33,15 +33,13 @@
   height: 36px;
   background-color: #FFFFFF;
   box-shadow: 0px 14px 24px 0px rgba(139, 139, 139, 0.2509803922);
+  color: black;
+  text-decoration: none;
 }
 .icon_section-H span {
   font-weight: 600;
   font-size: 25px;
   font-family: "Archivo";
-}
-.icon_section-H span a {
-  text-decoration: none;
-  color: black;
 }
 
 .icon_section-HM {
@@ -139,14 +137,12 @@
   }
   .icon_section-H {
     width: 35%;
+    text-decoration: none;
+    color: black;
     height: 80px;
   }
   .icon_section-H span {
     width: 23px;
-  }
-  .icon_section-H span a {
-    text-decoration: none;
-    color: black;
   }
   .section__HM-hotel {
     font-size: 19px;
@@ -916,6 +912,13 @@
   background-color: #FFFFFF;
   border-radius: 4px;
   box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.08);
+  transition: transform;
+}
+.rooms__section-price a {
+  text-decoration: none;
+}
+.rooms__section-price a a:hover {
+  transform: scale(2.05);
 }
 
 .rooms__section-price-info {
@@ -930,6 +933,7 @@
   line-height: 36px;
   letter-spacing: -1.2px;
   color: #222222;
+  text-decoration: none;
 }
 .rooms__section-price-info p {
   font-family: "Roboto";
@@ -938,6 +942,7 @@
   line-height: 24px;
   color: #777777;
   text-align: center;
+  text-decoration: none;
 }
 
 .rooms__section-price-number {

@@ -22,9 +22,11 @@
  <span class="crossIcon"><img src="../img/home/img-cross.png" alt="Cross menu icon" class="icon-menu--cross inactive"></span>
  </div>
  <div class="header__section-icon">
- <div class="icon_section-H">
- <a href="../index.php"><span>H</span></a>
+ <a href="../index.php" class="icon_section-H">
+ <div>
+ <span>H</span>
  </div>
+ </a>
  <div class="icon_section-HM">
  <span class="section__HM-hotel">HOTEL</span>
  <span class="section__HM-miranda">MIRANDA</span>
