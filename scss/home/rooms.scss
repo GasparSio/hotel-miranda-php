@@ -94,6 +94,14 @@
     background-color: $background-white;
     border-radius: 4px;
     box-shadow: 0px 3px 6px 0px rgb(0 0 0 / 8%);
+    transition: transform;
+    a{
+        text-decoration: none;
+        a:hover{
+            transform: scale(2.05);
+
+        }
+    }
 
 }
 .rooms__section-price-info{
@@ -107,6 +115,7 @@
         line-height: 36px;
         letter-spacing: -1.2px;
         color: $background-black;
+        text-decoration: none;
     }
     p{
         font-family: $roboto-font;
@@ -115,6 +124,7 @@
         line-height: 24px;
         color: $letterColor-grey-light;
         text-align: center;
+        text-decoration: none;
     }
 }
 .rooms__section-price-number{
