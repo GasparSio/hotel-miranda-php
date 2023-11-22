@@ -42,27 +42,17 @@
  <label for="check-out">Check out</label>
  <input type="date" id="check-out" name="check-out" required>
 
- <label for="opcion_1">Rooms</label>
- <select id="opcion_1" name="opcion_1">
- <option value="opcion1">01 Room</option>
- <option value="opcion2">02 Rooms</option>
- <option value="opcion3">03 Rooms</option>
- <option value="opcion4">04 Rooms</option>
- </select>
+ <label for="fullname">Full Name</label>
+ <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required>
 
- <label for="opcion_2">Guests</label>
- <select id="opcion_2" name="opcion_2">
- <option value="opcion1">01 Guest</option>
- <option value="opcion2">02 Guests</option>
- <option value="opcion3">03 Guests</option>
- <option value="opcion4">04 Guests</option>
- <option value="opcion5">05 Guests</option>
- <option value="opcion6">06 Guests</option>
- <option value="opcion7">07 Guests</option>
- <option value="opcion8">08 Guests</option>
- <option value="opcion9">09 Guests</option>
- <option value="opcion10">10 Guests</option>
- </select>
+ <label for="email">Email</label>
+ <input type="text" id="email" name="email" placeholder="Enter your email" required>
+
+ <label for="phone">Phone</label>
+ <input type="text" id="phone" name="phone" placeholder="Enter your phone" required>
+
+ <label for="message">Message</label>
+ <input type="text" id="message" name="message" placeholder="Any special request ?" required>
 
  <input type="submit" value="Check Availability" class="room__detail-form-button">
 

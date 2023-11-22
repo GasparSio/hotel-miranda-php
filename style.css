@@ -659,7 +659,7 @@
   transform: scale(1.02);
 }
 
-.schedule__section-button a {
+.schedule__section-button button {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -2591,21 +2591,7 @@
   font-family: Archivo;
   font-size: 14px;
   line-height: 15.23px;
-}
-.room__detail-form-container form select {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  width: 70%;
-  margin: auto;
-  height: 43px;
-  margin-top: 10px;
-  background-color: #F9F9F9;
-  border: none;
-  color: #777777;
-  font-family: Archivo;
-  font-size: 14px;
-  line-height: 15.23px;
+  padding-left: 7px;
 }
 
 .room__detail-form-container form .room__detail-form-button {
@@ -2665,6 +2651,7 @@
     margin-top: 15px;
   }
   .room__detail-info-container {
+    margin-top: -150px;
     width: 600px;
   }
 }
