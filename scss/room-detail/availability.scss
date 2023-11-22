@@ -90,9 +90,6 @@
             color: $background-black;
             margin-top: 10px;
         }
-        // input[type="date"]::-webkit-calendar-picker-indicator{
-        //     width: 40px;
-        // }
         input{
             display: flex;
             flex-direction: row;
@@ -106,27 +103,9 @@
             color: $letterColor-grey-light;
             font-family: $archivo-font;
             font-size: 14px;
-            line-height: 15.23px
-            
+            line-height: 15.23px;
+            padding-left: 7px;
         }
-        select{
-            display: flex;
-            flex-direction: row;
-            justify-content: space-evenly;
-            width: 70%;
-            margin: auto;
-            height: 43px;
-            margin-top: 10px;
-            background-color: $background-grey-light;
-            border: none;
-            color: $letterColor-grey-light;
-            font-family: $archivo-font;
-            font-size: 14px;
-            line-height: 15.23px
-        }
-        // select::-ms-expand{
-        //     width: 40px;
-        // }
     }
 }
 .room__detail-form-container form .room__detail-form-button{
@@ -191,6 +170,7 @@
         }
     }
     .room__detail-info-container{
+        margin-top: -150px;
         width: 600px;
     }
 }

@@ -29,6 +29,13 @@ $arrayImages = [
     '<img src="../img/home/pic-slider8.jpg" alt="Room image">',
     '<img src="../img/home/pic-slider9.jpg" alt="Room image">',
 ];
+$month = date('m');
+$day = date('d');
+$dayAfter = date('d') + 1;
+$year = date('Y');
+
+$today = $year . '-' . $month . '-' . $day;
+$tomorrow = $year . '-' . $month . '-' . $dayAfter;
 ?>
 
 @extends('layout')
@@ -47,23 +54,25 @@ $arrayImages = [
         </div>
     </div>
 </section>
-<section class="schedule__section">
-    <div class="schedule__section-calendar">
-        <div class="input__container__arrival">
-            <label for="date">Arrival date</label>
-            <div class="input-calendar-container">
-                <input type="date" class="input__container__arrival-date-input input-calendar" name="date" style="background-image: url('tu_ruta_de_la_imagen')">
+<form action="../rooms-grid.php" method="GET">
+    <section class="schedule__section">
+        <div class="schedule__section-calendar">
+            <div class="input__container__arrival">
+                <label for="date">Arrival date</label>
+                <div class="input-calendar-container">
+                    <input type="date" value="<?php echo $today; ?>" min="<?php echo $today; ?>" max="2025-11-22" name="availdatein" class="input__container__arrival-date-input input-calendar">
+                </div>
+            </div>
+            <div class="input__container__departure">
+                <label for="date-departure">Departure date</label>
+                <input type="date" id="date-departure" min="<?php echo $tomorrow; ?>" name="availdateout" class="input-calendar">
             </div>
         </div>
-        <div class="input__container__departure">
-            <label for="date-departure">Departure date</label>
-            <input type="date" id="date-departure" name="date" class="input-calendar">
+        <div class="schedule__section-button">
+            <button type="submit">CHECK AVAILABILITY</button>
         </div>
-    </div>
-    <div class="schedule__section-button">
-        <a href="rooms-grid.php">CHECK AVAILABILITY</a>
-    </div>
-</section>
+    </section>
+</form>
 <section class="about__section">
     <div class="about__section-info">
         <h2>ABOUT US</h2>

@@ -1,18 +1,18 @@
 <?php
+session_start();
 require_once('./setup.php');
 require_once("config.php");
 
-$successForm = false;
+$formSent = false;
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Obtener datos del formulario
-    $fullName = htmlspecialchars($_POST["input1"]);
-    $phoneNumber = htmlspecialchars($_POST["input2"]);
-    $email = htmlspecialchars($_POST["input3"]);
-    $subjectOfReview = htmlspecialchars($_POST["input4"]);
-    $reviewBody = htmlspecialchars($_POST["input5"]);
+    $fullName = htmlspecialchars($_POST["contactName"]);
+    $phoneNumber = htmlspecialchars($_POST["contactPhone"]);
+    $email = htmlspecialchars($_POST["contactEmail"]);
+    $subjectOfReview = htmlspecialchars($_POST["contactSubject"]);
+    $reviewBody = htmlspecialchars($_POST["contactMessage"]);
 
-    // Preparar la consulta SQL
     $sql = "INSERT INTO contact (full_name, email, phone_number, subject_of_review, review_body, dateTime, status) VALUES (?, ?, ?, ?, ?, CURDATE(), 'Not Archived')";
 
     // Preparar la declaración
@@ -23,17 +23,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Ejecutar la declaración
     if ($stmt->execute()) {
-        // Éxito en la inserción
-        $successForm = true;
+        $formSent = 'Form Sent';
+        $_SESSION['notification'] = ['message' => $formSent];
     } else {
-        // Error en la inserción
-        $successForm = "Error: " . $stmt->error;
+        $formSent = "Error: " . $stmt->error;
+        $_SESSION['notification'] = ['message' => $formSent, 'error' => true];
     }
-
     // Cerrar la conexión
     $stmt->close();
 }
-// Cerrar la conexión (si no se ha cerrado ya)
 
-echo $blade->run('contact', ['successForm' => $successForm]);
+echo $blade->run('contact', ['notification' => $_SESSION['notification'] ?? null, 'error' => false]);
+$_SESSION['notification'] = null;
+
 $conn->close();
