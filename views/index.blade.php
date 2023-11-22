@@ -119,13 +119,15 @@ $tomorrow = $year . '-' . $month . '-' . $dayAfter;
                     <?php echo $imagenAleatoria; ?>
                 </div>
                 <div class="rooms__section-price">
-                    <div class="rooms__section-price-info">
-                        <h1>{{$room['room_type']}}</h1>
-                        <p>{{$room['description']}}</p>
-                    </div>
-                    <div class="rooms__section-price-number">
-                        <span class="price-number-big">$ {{$room['price']}}</span><span class="price-number-small">/night</span>
-                    </div>
+                    <a href="../rooms-grid.php">
+                        <div class="rooms__section-price-info">
+                            <h1>{{$room['room_type']}}</h1>
+                            <p>{{$room['description']}}</p>
+                        </div>
+                        <div class="rooms__section-price-number">
+                            <span class="price-number-big">$ {{$room['price']}}</span><span class="price-number-small">/night</span>
+                        </div>
+                    </a>
                 </div>
             </div>
             @endforeach
