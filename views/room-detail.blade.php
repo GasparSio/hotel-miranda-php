@@ -29,6 +29,7 @@ $photosImages = [
     '<img src="../img/home/pic-slider8.jpg" alt="Room image">',
     '<img src="../img/home/pic-slider9.jpg" alt="Room image">',
 ];
+
 ?>
 
 @extends('layout')
@@ -55,10 +56,19 @@ $photosImages = [
         <div class="room__detail-title-price-container">
             <div class="room__detail-title">
                 <h1>{{$room['room_type']}}</h1>
+                <h2>Luxury {{$room['room_type']}}</h2>
             </div>
             <div class="room__detail-price">
+                @if($room['discount'] === 0)
                 <span class="detail-price">${{$room['price']}}</span>
                 <span class="detail-night">/Night</span>
+                @else
+                @php
+                $calculatedPrice = intval($room['price'] - ($room['price'] * ($room['discount'] / 100)));
+                @endphp
+                <span class="discountedPrice">$ {{ $calculatedPrice }}</span>
+                <span class="discountedText">/Night</span>
+                @endif
             </div>
         </div>
         <div class="room__detail-image">

@@ -112,53 +112,12 @@ $amenitiesData = [
                 <span>{{ $amenitiesData[$index]['description'] }}</span>
             </div>
             @endforeach
-            <!-- <div class="offers__room-amenities-info">
-                <img src="../img/room-detail/img-air-cond.png" alt="image amenities">
-                <span>Air conditioner</span>
-            </div>
-            <div class="offers__room-amenities-info">
-                <img src="../img/room-detail/img-breakfast.png" alt="image amenities">
-                <span>Breakfast</span>
-            </div>
-            <div class="offers__room-amenities-info">
-                <img src="../img/room-detail/img-cleaning.png" alt="image amenities">
-                <span>Cleaning</span>
-            </div>
-            <div class="offers__room-amenities-info">
-                <img src="../img/room-detail/img-grocery.png" alt="image amenities">
-                <span>Grocery</span>
-            </div>
-            <div class="offers__room-amenities-info">
-                <img src="../img/room-detail/img-shop near.png" alt="image amenities">
-                <span>Shop near</span>
-            </div>
-            <div class="offers__room-amenities-info">
-                <img src="../img/room-detail/img-online.png" alt="image amenities">
-                <span>24/7 Online Support</span>
-            </div>
-            <div class="offers__room-amenities-info">
-                <img src="../img/room-detail/img-wifi.png" alt="image amenities">
-                <span>High speed WiFi</span>
-            </div>
-            <div class="offers__room-amenities-info">
-                <img src="../img/room-detail/img-kitchen.png" alt="image amenities">
-                <span>Kitchen</span>
-            </div>
-            <div class="offers__room-amenities-info">
-                <img src="../img/room-detail/img-shower.png" alt="image amenities">
-                <span>Shower</span>
-            </div>
-            <div class="offers__room-amenities-info">
-                <img src="../img/room-detail/img-bad.png" alt="image amenities">
-                <span>Single bed</span>
-            </div>
-            <div class="offers__room-amenities-info">
-                <img src="../img/room-detail/img-towels.png" alt="image amenities">
-                <span>Towels</span>
-            </div> -->
         </div>
         <div class="offers__room-button-container">
-            <a href="room-detail.php">Book Now</a>
+            <form action="../room-detail.php" method="GET">
+                <input type="hidden" name="roomId" value="{{$room['id']}}">
+                <button type="submit">Booking Now</button>
+            </form>
         </div>
     </div>
 </section>
