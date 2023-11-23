@@ -5,7 +5,6 @@ require_once("config.php");
 
 $formSent = false;
 
-
 if ($_SERVER["REQUEST_METHOD"] === "GET") {
     if (isset($_GET["roomId"])) {
         $start = $_SESSION['availdatein'];
@@ -14,7 +13,7 @@ if ($_SERVER["REQUEST_METHOD"] === "GET") {
         $_SESSION['roomSessionId'] = $id;
 
         $sql = "SELECT * FROM room WHERE id = $id";
-        $sqlRelatedRooms = "select * from room WHERE status = 'Available' limit 2;";
+        $sqlRelatedRooms = "select * from room WHERE status = 'Available' AND discount = 0 limit 2;";
     }
     $result = $conn->query($sql);
     $room = $result->fetch_assoc();

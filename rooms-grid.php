@@ -4,7 +4,6 @@ require_once('./setup.php');
 require_once("config.php");
 
 
-
 if (isset($_GET["availdatein"]) && isset($_GET["availdateout"])) {
     $checkin = htmlspecialchars($_GET["availdatein"]);
     $_SESSION['availdatein'] = $checkin;
@@ -14,7 +13,7 @@ if (isset($_GET["availdatein"]) && isset($_GET["availdateout"])) {
     $sql =
         "SELECT r.*
             FROM room r
-            WHERE r.status = 'Available'
+            WHERE r.status = 'Available' AND discount = 0
             AND NOT EXISTS (
                 SELECT 1
                 FROM booking b
@@ -27,7 +26,7 @@ if (isset($_GET["availdatein"]) && isset($_GET["availdateout"])) {
                 )
             );";
 } else {
-    $sql = "SELECT * FROM room WHERE status = 'Available'";
+    $sql = "SELECT * FROM room WHERE status = 'Available' AND discount = 0";
 }
 
 $result = $conn->query($sql);
