@@ -28,25 +28,27 @@
     margin: auto;
     max-width: 300px;
     margin-bottom: 40px;
-    a{
-        text-decoration: none;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 216px;
-        height: 60px;
-        background-color: $color-botton;
-        color: $background-white;
-        border: none;
-        font-size: 14px;
-        font-family: $archivo-font;
-        font-weight: $weight-700;
-        line-height: 15.23px;
-        letter-spacing: 2.8px;
-        cursor: pointer;
-        transition: transform 0.2s;
-        &:hover {
-            transform: scale(1.02);
+    form{
+        button{
+            text-decoration: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 216px;
+            height: 60px;
+            background-color: $color-botton;
+            color: $background-white;
+            border: none;
+            font-size: 14px;
+            font-family: $archivo-font;
+            font-weight: $weight-700;
+            line-height: 15.23px;
+            letter-spacing: 2.8px;
+            cursor: pointer;
+            transition: transform 0.2s;
+            &:hover {
+                transform: scale(1.02);
+            }
         }
     }
 }

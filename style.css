@@ -2527,6 +2527,7 @@
   line-height: 15.23px;
   letter-spacing: 2.8px;
   color: #777777;
+  padding-left: 10px;
 }
 .room__detail-title h1 {
   font-family: "Old Standard TT";
@@ -2552,6 +2553,14 @@
   color: #BEAD8E;
 }
 
+.discountedPrice {
+  font-family: Archivo;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 43px;
+  color: #DE5777;
+}
+
 .detail-night {
   display: flex;
   align-items: flex-end;
@@ -2560,6 +2569,16 @@
   font-weight: 700;
   line-height: 43px;
   color: #BEAD8E;
+}
+
+.discountedText {
+  display: flex;
+  align-items: flex-end;
+  font-family: Archivo;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 43px;
+  color: #DE5777;
 }
 
 .room__detail-image img {
@@ -2668,7 +2687,7 @@
     position: absolute;
     background-color: white;
     width: 260px;
-    height: 110px;
+    height: 130px;
     border-radius: 0 0 3px 0;
   }
   .room__detail-price {
@@ -3258,7 +3277,7 @@ body {
   max-width: 300px;
   margin-bottom: 40px;
 }
-.offers__room-button-container a {
+.offers__room-button-container form button {
   text-decoration: none;
   display: flex;
   justify-content: center;
@@ -3276,7 +3295,7 @@ body {
   cursor: pointer;
   transition: transform 0.2s;
 }
-.offers__room-button-container a:hover {
+.offers__room-button-container form button:hover {
   transform: scale(1.02);
 }
 

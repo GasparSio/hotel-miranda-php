@@ -24,6 +24,7 @@
         line-height: 15.23px;
         letter-spacing: 2.8px;
         color: $letterColor-grey-light;
+        padding-left: 10px;
     }
     h1{
         font-family: $old-standard-font;
@@ -47,6 +48,14 @@
     line-height: 43px;
     color: $color-botton;
 }
+.discountedPrice{
+    font-family: $archivo-font;
+    font-size: 32px;
+    font-weight: $weight-700;
+    line-height: 43px;
+    color: #DE5777;
+}
+
 .detail-night{
     display: flex;
     align-items: flex-end;
@@ -55,6 +64,15 @@
     font-weight: $weight-700;
     line-height: 43px;
     color: $color-botton;
+}
+.discountedText{
+    display: flex;
+    align-items: flex-end;
+    font-family: $archivo-font;
+    font-size: 13px;
+    font-weight: $weight-700;
+    line-height: 43px;
+    color: #DE5777;
 }
 .room__detail-image{
     img{
@@ -161,7 +179,7 @@
         position: absolute;
         background-color: white;
         width: 260px;
-        height: 110px;
+        height: 130px;
         border-radius: 0 0 3px 0;
     }
     .room__detail-price{
