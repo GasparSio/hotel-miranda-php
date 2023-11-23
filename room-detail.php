@@ -12,11 +12,17 @@ if ($_SERVER["REQUEST_METHOD"] === "GET") {
         $end = $_SESSION['availdateout'];
         $id = htmlspecialchars($_GET["roomId"]);
         $_SESSION['roomSessionId'] = $id;
+
         $sql = "SELECT * FROM room WHERE id = $id";
+        $sqlRelatedRooms = "select * from room WHERE status = 'Available' limit 2;";
     }
     $result = $conn->query($sql);
-    $rooms = $result->fetch_assoc();
-    echo $blade->run('room-detail', ['room' => $rooms, 'start' => $start, 'end' => $end]);
+    $room = $result->fetch_assoc();
+
+    $resultRelatedRoom = $conn->query($sqlRelatedRooms);
+    $rooms = $resultRelatedRoom->fetch_all(MYSQLI_ASSOC);
+
+    echo $blade->run('room-detail', ['room' => $room, 'rooms' => $rooms, 'start' => $start, 'end' => $end]);
 } else if ($_SERVER["REQUEST_METHOD"] === "POST") {
     if (isset($_POST["check-in"]) && isset($_POST["check-out"]) && isset($_POST["fullname"]) && isset($_POST["phone"]) && isset($_POST["message"])) {
         $fullname = htmlspecialchars($_POST["fullname"]);

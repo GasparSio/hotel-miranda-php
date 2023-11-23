@@ -74,30 +74,41 @@
     }   
 }
 
-.room__detail-grid-price{
+.room__detail-grid-price {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     width: 80%;
     margin: auto;
-    span{
+    span {
         font-family: $archivo-font;
         font-weight: $weight-700;
         font-size: 16px;
         line-height: 17.41px;
         color: $color-botton;
     }
-    a{
-        display: flex;
-        text-decoration: none;
-        justify-content: center;
-        align-items: center;
-        font-family: $archivo-font;
-        font-weight: $weight-700;
-        font-size: 16px;
-        line-height: 17.41px;
-        color: #BDBDBD;
-        border: none;
-        background: transparent;
+    form {
+        button {
+            font-family: $archivo-font;
+            font-weight: $weight-700;
+            font-size: 16px;
+            line-height: 17.41px;
+            color: #BDBDBD;
+            border: none;
+            background: transparent;
+            transition: transform;
+            text-decoration: none;
+        }
+        button:hover {
+            transform: scale(1.05);
+            background-color: #BEAD8E;
+            color: white;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 2px;
+            width: 114px;
+        }
     }
 }
 .room__detail-section-amenities{
@@ -156,6 +167,20 @@
         img{
             margin: auto;
             max-width: 80%;
+        }
+    }
+    .room__detail-grid-price {
+        form {
+            button:hover {
+                background-color: #BEAD8E;
+                color: white;
+                height: 20px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 2px;
+                width: 114px;
+            }
         }
     }
 }
