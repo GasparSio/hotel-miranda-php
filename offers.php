@@ -3,7 +3,7 @@ require_once('./setup.php');
 require_once("config.php");
 
 
-$sql = "select * from room WHERE offer_price != 0 AND discount > 0 limit 8";
+$sql = "select * from room WHERE status = 'Available' AND discount > 0 limit 5";
 $result = $conn->query($sql);
 
 

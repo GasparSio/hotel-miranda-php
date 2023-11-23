@@ -62,16 +62,23 @@
     justify-content: space-evenly;
     display: none;
 }
-.header__section-search-account{
+.header__section-search-account {
     position: absolute;
     right: 15px;
     display: flex;
-    width: 15%;
     justify-content: center;
+    width: 15%;
     gap: 15px;
     cursor: pointer;
     transition: transform;
-    img:hover {
+    a{
+        width: 20px;
+        height: 20px;
+    }
+    a img{
+        width: 100%;
+    }
+    a img:hover {
         transform: scale(1.02);
     }
 }
@@ -165,9 +172,16 @@
     .header__section-search-account{
         right: 25px;
         gap: 25px;
-        img{
+        a {
+            width: 33px;
+            height: 33px;
+        }
+        a img {
             border: 2px solid #8585854D;
             padding: 8%;
+        }
+        a img:hover {
+            transform: scale(1.02);
         }
     }
     .header__section-ham-menu{

@@ -92,8 +92,8 @@
 
 .offers__detail-grid-price{
     display: flex;
-    justify-content: space-evenly;
-    width: 80%;
+    justify-content: space-between;
+    width: 95%;
     margin: auto;
     span{
         font-family: $archivo-font;
@@ -104,16 +104,26 @@
     }
     a{
         display: flex;
+        text-align: center;
+        width: 45%;
         align-items: center;
         justify-content: center;
         text-decoration: none;
         font-family: $archivo-font;
         font-weight: $weight-700;
-        font-size: 16px;
+        font-size: 14px;
         line-height: 17.41px;
         color: #BDBDBD;
         border: none;
         background: transparent;
+        &:hover{
+            background-color: $color-botton;
+            border-radius: 7px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #F1F1F1;
+        }
     }
 }
 .offers__detail-section-amenities{

@@ -150,7 +150,7 @@ $amenitiesData = [
                 <p>{{$room['description']}}</p>
                 <div class="offers__detail-grid-price">
                     <span>${{$room['price']}} /Night</span>
-                    <a href="room-detail.php">Booking Now</a>
+                    <a href="rooms-grid.php">Check our available rooms</a>
                 </div>
             </div>
             @endforeach

@@ -39,8 +39,8 @@
             <a href="./contact.php" class="section-contact" id="contactLink">Contact</a>
         </div>
         <div class="header__section-search-account">
-            <img src="../img/home/img-account.png" alt="Account icon">
-            <img src="../img/home/img-search.png" alt="Search icon">
+            <a href="../contact.php"><img src="../img/home/img-account.png" alt="Account icon"></a>
+            <a href="../rooms-grid.php"><img src="../img/home/img-search.png" alt="Search icon"></a>
         </div>
         <div class="header__mob-menu inactive">
             <a href="./about.php" class="section-why" id="aboutLink">About Us</a>
