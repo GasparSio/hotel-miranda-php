@@ -93,14 +93,13 @@
     position: relative;
     background-color: $background-white;
     border-radius: 4px;
-    box-shadow: 0px 3px 6px 0px rgb(0 0 0 / 8%);
+    box-shadow: 0px 3px 6px 0px rgb(147 118 57 / 64%);
     transition: transform;
     a{
         text-decoration: none;
-        a:hover{
-            transform: scale(2.05);
-
-        }
+    }
+    :hover{
+        transform: scale(1.007);
     }
 
 }

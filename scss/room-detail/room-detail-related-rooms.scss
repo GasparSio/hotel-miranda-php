@@ -135,7 +135,8 @@
 @media only screen and (min-width: 1000px){
     .room__detail-related-rooms{
         max-width: 600px;
-        margin-left: 5%;
+        margin: auto;
+        margin-top: 60px;
     }
     .room__detail-title{
         h1{

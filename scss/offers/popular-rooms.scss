@@ -148,8 +148,9 @@
 
 @media only screen and (min-width: 1000px){
     .offers__detail-related-rooms{
-        max-width: 100%;
-        margin-left: 0;
+        max-width: 1440px;
+        margin: auto;
+        margin-top: 50px;
         background-color: $background-black;
     }
     .offers__detail-title{

@@ -911,14 +911,14 @@
   position: relative;
   background-color: #FFFFFF;
   border-radius: 4px;
-  box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.08);
+  box-shadow: 0px 3px 6px 0px rgba(147, 118, 57, 0.64);
   transition: transform;
 }
 .rooms__section-price a {
   text-decoration: none;
 }
-.rooms__section-price a a:hover {
-  transform: scale(2.05);
+.rooms__section-price :hover {
+  transform: scale(1.007);
 }
 
 .rooms__section-price-info {
@@ -2598,6 +2598,7 @@
   margin-top: 10px;
 }
 .room__detail-form-container form input {
+  position: relative;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -2616,13 +2617,13 @@
 
 .room-detail-checkininput[type=date]::-webkit-calendar-picker-indicator {
   width: 100%;
-  background-position-x: 55%;
+  background-position-x: 90%;
   position: absolute;
 }
 
 .room-detail-checkoutinput[type=date]::-webkit-calendar-picker-indicator {
   width: 100%;
-  background-position-x: 55%;
+  background-position-x: 90%;
   position: absolute;
 }
 
@@ -2651,6 +2652,10 @@
 }
 
 @media only screen and (min-width: 1000px) {
+  .room__detail-availability {
+    max-width: 1440px;
+    margin: auto;
+  }
   .room__detail-availability-container {
     flex-wrap: wrap;
     flex-direction: row;
@@ -2662,7 +2667,7 @@
   .room__detail-title-price-container {
     position: absolute;
     background-color: white;
-    width: 500px;
+    width: 260px;
     height: 110px;
     border-radius: 0 0 3px 0;
   }
@@ -2741,7 +2746,8 @@ body {
 @media only screen and (min-width: 1000px) {
   .room__detail-amenities {
     width: 600px;
-    margin-left: 5%;
+    margin: auto;
+    margin-top: 75px;
     max-width: none;
   }
   .room__detail-amenities h1 {
@@ -2824,7 +2830,8 @@ body {
 
 @media only screen and (min-width: 1000px) {
   .room__detail-profile {
-    margin-left: 15%;
+    margin: auto;
+    margin-top: 60px;
   }
 }
 .room__detail-cancellation {
@@ -2862,7 +2869,8 @@ body {
 @media only screen and (min-width: 1000px) {
   .room__detail-cancellation {
     width: 600px;
-    margin-left: 5%;
+    margin: auto;
+    margin-top: 60px;
     max-width: none;
   }
   .room__detail-cancellation h1 {
@@ -3008,7 +3016,8 @@ body {
 @media only screen and (min-width: 1000px) {
   .room__detail-related-rooms {
     max-width: 600px;
-    margin-left: 5%;
+    margin: auto;
+    margin-top: 60px;
   }
   .room__detail-title h1 {
     margin: 15px 25px;
@@ -3428,8 +3437,9 @@ body {
 
 @media only screen and (min-width: 1000px) {
   .offers__detail-related-rooms {
-    max-width: 100%;
-    margin-left: 0;
+    max-width: 1440px;
+    margin: auto;
+    margin-top: 50px;
     background-color: #222222;
   }
   .offers__detail-title h1 {

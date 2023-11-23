@@ -91,6 +91,7 @@
             margin-top: 10px;
         }
         input{
+            position: relative;
             display: flex;
             flex-direction: row;
             justify-content: space-evenly;
@@ -110,12 +111,12 @@
 }
 .room-detail-checkininput[type="date"]::-webkit-calendar-picker-indicator{
     width: 100%;
-    background-position-x: 55%;
+    background-position-x: 90%;
     position: absolute;
 } 
 .room-detail-checkoutinput[type="date"]::-webkit-calendar-picker-indicator{
     width: 100%;
-    background-position-x: 55%;
+    background-position-x: 90%;
     position: absolute;
 }
 .room__detail-form-container form .room__detail-form-button{
@@ -144,6 +145,10 @@
 }
 
 @media only screen and (min-width: 1000px){
+    .room__detail-availability{
+        max-width: 1440px;
+        margin: auto;
+    }
     .room__detail-availability-container{
         flex-wrap: wrap;
         flex-direction: row;
@@ -155,7 +160,7 @@
     .room__detail-title-price-container{
         position: absolute;
         background-color: white;
-        width: 500px;
+        width: 260px;
         height: 110px;
         border-radius: 0 0 3px 0;
     }
