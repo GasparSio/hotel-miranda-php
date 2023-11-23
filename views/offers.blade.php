@@ -122,8 +122,6 @@ $amenitiesData = [
     </div>
 </section>
 @endforeach
-
-
 <section class="offers__detail-related-rooms">
     <div class="offers__detail-title">
         <h2>Popular List</h2>

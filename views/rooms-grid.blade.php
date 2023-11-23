@@ -31,8 +31,6 @@ $photosImages = [
 ];
 ?>
 
-
-
 @extends('layout')
 @section('title', 'Rooms Grid')
 

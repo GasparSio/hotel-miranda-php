@@ -124,8 +124,6 @@ $amenitiesData = [
  </div>
 </section>
 <?php endforeach; $this->popLoop(); $loop = $this->getFirstLoop(); ?>
-
-
 <section class="offers__detail-related-rooms">
  <div class="offers__detail-title">
  <h2>Popular List</h2>

@@ -39,10 +39,13 @@ if ($_SERVER["REQUEST_METHOD"] === "GET") {
 
         // $stmt->bind_param("ssssss", $fullname, $phone, $message, $roomSessionId);
         if ($stmt->execute()) {
-            echo $blade->run('index');
+            $formSent = '🎉 Your room has been booked.';
+            $_SESSION['notification'] = ['message' => $formSent];
+            echo $blade->run('index', ['notification' => $_SESSION['notification'] ?? null, 'error' => false]);
             session_destroy();
         } else {
-            echo 'error';
+            $formSent = "Error: " . $stmt->error;
+            $_SESSION['notification'] = ['message' => $formSent, 'error' => true];
         }
     }
 }
