@@ -2956,7 +2956,7 @@ body {
 
 .room__detail-grid-price {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   width: 80%;
   margin: auto;
 }
@@ -2967,11 +2967,7 @@ body {
   line-height: 17.41px;
   color: #BEAD8E;
 }
-.room__detail-grid-price a {
-  display: flex;
-  text-decoration: none;
-  justify-content: center;
-  align-items: center;
+.room__detail-grid-price form button {
   font-family: Archivo;
   font-weight: 700;
   font-size: 16px;
@@ -2979,6 +2975,19 @@ body {
   color: #BDBDBD;
   border: none;
   background: transparent;
+  transition: transform;
+  text-decoration: none;
+}
+.room__detail-grid-price form button:hover {
+  transform: scale(1.05);
+  background-color: #BEAD8E;
+  color: white;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 2px;
+  width: 114px;
 }
 
 .room__detail-section-amenities {
@@ -3036,6 +3045,16 @@ body {
   .room__detail-rooms-slider img {
     margin: auto;
     max-width: 80%;
+  }
+  .room__detail-grid-price form button:hover {
+    background-color: #BEAD8E;
+    color: white;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2px;
+    width: 114px;
   }
 }
 .offers__room-section {
