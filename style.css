@@ -2716,7 +2716,7 @@
   }
   .room__detail-form-container {
     margin-top: -34px;
-    width: 280px;
+    min-width: 264px;
   }
   .room__detail-form-container form {
     margin-top: 15px;
