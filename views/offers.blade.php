@@ -1,51 +1,3 @@
-<?php
-include '../db-config.php';
-
-$amenityImages = [
-    '<i class="fa-solid fa-bed"></i>',
-    '<i class="fa-solid fa-wifi"></i>',
-    '<i class="fa-solid fa-car"></i>',
-    '<i class="fa-regular fa-snowflake"></i>',
-    '<i class="fa-solid fa-dumbbell"></i>',
-    '<i class="fa-solid fa-ban-smoking"></i>',
-    '<i class="fa-solid fa-martini-glass-citrus"></i>',
-    '<i class="fa-solid fa-mug-hot"></i>',
-    '<i class="fa-solid fa-person-swimming"></i>',
-    '<i class="fa-solid fa-shower"></i>',
-    '<i class="fa-solid fa-bell-concierge"></i>',
-    '<i class="fa-solid fa-hot-tub-person"></i>',
-    '<i class="fa-solid fa-lock"></i>',
-    '<i class="fa-solid fa-sun"></i>',
-    '<i class="fa-solid fa-taxi"></i>',
-];
-$arrayImages = [
-    '<img src="/img/home/pic-slider1.jpg" alt="Room image">',
-    '<img src="/img/home/pic-slider2.jpg" alt="Room image">',
-    '<img src="/img/home/pic-slider3.jpg" alt="Room image">',
-    '<img src="/img/home/pic-slider4.jpg" alt="Room image">',
-    '<img src="/img/home/pic-slider5.jpg" alt="Room image">',
-    '<img src="/img/home/pic-slider6.jpg" alt="Room image">',
-    '<img src="/img/home/pic-slider7.jpg" alt="Room image">',
-    '<img src="/img/home/pic-slider8.jpg" alt="Room image">',
-    '<img src="/img/home/pic-slider9.jpg" alt="Room image">',
-];
-$amenitiesData = [
-    ['url' => '/img/room-detail/img-air-cond.png', 'description' => 'Air conditioner'],
-    ['url' => '/img/room-detail/img-breakfast.png', 'description' => 'Breakfast'],
-    ['url' => '/img/room-detail/img-cleaning.png', 'description' => 'Cleaning'],
-    ['url' => '/img/room-detail/img-grocery.png', 'description' => 'Grocery'],
-    ['url' => '/img/room-detail/img-shop near.png', 'description' => 'Shop near'],
-    ['url' => '/img/room-detail/img-online.png', 'description' => '24/7 Online Support'],
-    ['url' => '/img/room-detail/img-wifi.png', 'description' => 'High speed WiFi'],
-    ['url' => '/img/room-detail/img-kitchen.png', 'description' => 'Kitchen'],
-    ['url' => '/img/room-detail/img-shower.png', 'description' => 'Shower'],
-    ['url' => '/img/room-detail/img-bad.png', 'description' => 'Single bed'],
-    ['url' => '/img/room-detail/img-towels.png', 'description' => 'Towels'],
-
-];
-?>
-
-
 @extends('layout')
 @section('title', 'Offers')
 
@@ -66,20 +18,14 @@ $amenitiesData = [
     </div>
 </section>
 
-
 @foreach ($rooms as $room)
 <section class="offers__room-section">
     <div class="offers__room-info-container">
         <div class="offers__room-image">
-            <?php
-            $indiceAleatorio = array_rand($arrayImages);
-            $imagenAleatoria = $arrayImages[$indiceAleatorio];
-            ?>
-            <?php echo $imagenAleatoria; ?>
+            {!! $room['randomImage'] !!}
         </div>
         <div class="offers__room-price-container">
             <div class="offers__room-title">
-                <!-- <h2>Double Bed</h2> -->
                 <h1>{{$room['room_type']}}</h1>
             </div>
             <div class="offers__room-price-section">
@@ -100,13 +46,10 @@ $amenitiesData = [
             <p>{{$room['description']}}</p>
         </div>
         <div class="offers__room-amenities-container">
-            @php
-            $randomAmenities = array_rand($amenitiesData, 8);
-            @endphp
-            @foreach ($randomAmenities as $index)
+            @foreach ($room['amenitiesData'] as $amenity)
             <div class="offers__room-amenities-info">
-                <img src="{{ $amenitiesData[$index]['url'] }}" alt="image amenities">
-                <span>{{ $amenitiesData[$index]['description'] }}</span>
+                <img src="{{ $amenity['url'] }}" alt="image amenities">
+                <span>{{ $amenity['description'] }}</span>
             </div>
             @endforeach
         </div>
@@ -132,14 +75,10 @@ $amenitiesData = [
             <div class="offers__detail-rooms-slider card-detail1">
                 <img src="/img/rooms-grid/room-8.avif" alt="room 1">
                 <div class="offers__detail-section-amenities">
-                    <?php
-                    // Mezclar y seleccionar imágenes para cada habitación
-                    shuffle($amenityImages);
-                    $selectedImages = array_slice($amenityImages, 0, 8);
-                    ?>
-                    @foreach ($selectedImages as $image)
+                    @foreach ($room['amenityImages'] as $image)
                     {!! $image !!}
                     @endforeach
+                    {!! $relatedRoom['randomImage'] !!}
                 </div>
                 <h3>{{$room['room_type']}}</h3>
                 <p>{{$room['description']}}</p>

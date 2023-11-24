@@ -168,7 +168,7 @@
                 <div class="room__detail-grid-price">
                     <span>${{$relatedRoom['price']}}/Night</span>
                     <form action="../room-detail.php" method="GET">
-                        <input type="hidden" name="roomId" value="{{$room['id']}}">
+                        <input type="hidden" name="roomId" value="{{$relatedRoom['id']}}">
                         <button type="submit">Booking Now</button>
                     </form>
                 </div>

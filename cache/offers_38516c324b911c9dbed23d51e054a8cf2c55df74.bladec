@@ -1,51 +1,3 @@
-<?php
-include '../db-config.php';
-
-$amenityImages = [
- '<i class="fa-solid fa-bed"></i>',
- '<i class="fa-solid fa-wifi"></i>',
- '<i class="fa-solid fa-car"></i>',
- '<i class="fa-regular fa-snowflake"></i>',
- '<i class="fa-solid fa-dumbbell"></i>',
- '<i class="fa-solid fa-ban-smoking"></i>',
- '<i class="fa-solid fa-martini-glass-citrus"></i>',
- '<i class="fa-solid fa-mug-hot"></i>',
- '<i class="fa-solid fa-person-swimming"></i>',
- '<i class="fa-solid fa-shower"></i>',
- '<i class="fa-solid fa-bell-concierge"></i>',
- '<i class="fa-solid fa-hot-tub-person"></i>',
- '<i class="fa-solid fa-lock"></i>',
- '<i class="fa-solid fa-sun"></i>',
- '<i class="fa-solid fa-taxi"></i>',
-];
-$arrayImages = [
- '<img src="/img/home/pic-slider1.jpg" alt="Room image">',
- '<img src="/img/home/pic-slider2.jpg" alt="Room image">',
- '<img src="/img/home/pic-slider3.jpg" alt="Room image">',
- '<img src="/img/home/pic-slider4.jpg" alt="Room image">',
- '<img src="/img/home/pic-slider5.jpg" alt="Room image">',
- '<img src="/img/home/pic-slider6.jpg" alt="Room image">',
- '<img src="/img/home/pic-slider7.jpg" alt="Room image">',
- '<img src="/img/home/pic-slider8.jpg" alt="Room image">',
- '<img src="/img/home/pic-slider9.jpg" alt="Room image">',
-];
-$amenitiesData = [
- ['url' => '/img/room-detail/img-air-cond.png', 'description' => 'Air conditioner'],
- ['url' => '/img/room-detail/img-breakfast.png', 'description' => 'Breakfast'],
- ['url' => '/img/room-detail/img-cleaning.png', 'description' => 'Cleaning'],
- ['url' => '/img/room-detail/img-grocery.png', 'description' => 'Grocery'],
- ['url' => '/img/room-detail/img-shop near.png', 'description' => 'Shop near'],
- ['url' => '/img/room-detail/img-online.png', 'description' => '24/7 Online Support'],
- ['url' => '/img/room-detail/img-wifi.png', 'description' => 'High speed WiFi'],
- ['url' => '/img/room-detail/img-kitchen.png', 'description' => 'Kitchen'],
- ['url' => '/img/room-detail/img-shower.png', 'description' => 'Shower'],
- ['url' => '/img/room-detail/img-bad.png', 'description' => 'Single bed'],
- ['url' => '/img/room-detail/img-towels.png', 'description' => 'Towels'],
-
-];
-?>
-
-
 <?php $_shouldextend[1]=1; ?>
 <?php $this->startSection('title', 'Offers'); ?>
 
@@ -66,21 +18,16 @@ $amenitiesData = [
  </div>
 </section>
 
-
 <?php $__currentLoopData = $rooms; $this->addLoop($__currentLoopData);$this->getFirstLoop();
  foreach($__currentLoopData as $room): $loop = $this->incrementLoopIndices();  ?>
 <section class="offers__room-section">
  <div class="offers__room-info-container">
  <div class="offers__room-image">
- <?php
- $indiceAleatorio = array_rand($arrayImages);
- $imagenAleatoria = $arrayImages[$indiceAleatorio];
- ?>
- <?php echo $imagenAleatoria; ?>
+ <?php echo $room['randomImage']; ?>
+
  </div>
  <div class="offers__room-price-container">
  <div class="offers__room-title">
- <!-- <h2>Double Bed</h2> -->
  <h1><?php echo \htmlentities($room['room_type']??'', ENT_QUOTES, 'UTF-8', false); ?></h1>
  </div>
  <div class="offers__room-price-section">
@@ -101,14 +48,11 @@ $amenitiesData = [
  <p><?php echo \htmlentities($room['description']??'', ENT_QUOTES, 'UTF-8', false); ?></p>
  </div>
  <div class="offers__room-amenities-container">
- <?php 
- $randomAmenities = array_rand($amenitiesData, 8);
- ?>
- <?php $__currentLoopData = $randomAmenities; $this->addLoop($__currentLoopData);$this->getFirstLoop();
- foreach($__currentLoopData as $index): $loop = $this->incrementLoopIndices();  ?>
+ <?php $__currentLoopData = $room['amenitiesData']; $this->addLoop($__currentLoopData);$this->getFirstLoop();
+ foreach($__currentLoopData as $amenity): $loop = $this->incrementLoopIndices();  ?>
  <div class="offers__room-amenities-info">
- <img src="<?php echo \htmlentities($amenitiesData[$index]['url']??'', ENT_QUOTES, 'UTF-8', false); ?>" alt="image amenities">
- <span><?php echo \htmlentities($amenitiesData[$index]['description']??'', ENT_QUOTES, 'UTF-8', false); ?></span>
+ <img src="<?php echo \htmlentities($amenity['url']??'', ENT_QUOTES, 'UTF-8', false); ?>" alt="image amenities">
+ <span><?php echo \htmlentities($amenity['description']??'', ENT_QUOTES, 'UTF-8', false); ?></span>
  </div>
  <?php endforeach; $this->popLoop(); $loop = $this->getFirstLoop(); ?>
  </div>
@@ -135,16 +79,13 @@ $amenitiesData = [
  <div class="offers__detail-rooms-slider card-detail1">
  <img src="/img/rooms-grid/room-8.avif" alt="room 1">
  <div class="offers__detail-section-amenities">
- <?php
- // Mezclar y seleccionar imágenes para cada habitación
- shuffle($amenityImages);
- $selectedImages = array_slice($amenityImages, 0, 8);
- ?>
- <?php $__currentLoopData = $selectedImages; $this->addLoop($__currentLoopData);$this->getFirstLoop();
+ <?php $__currentLoopData = $room['amenityImages']; $this->addLoop($__currentLoopData);$this->getFirstLoop();
  foreach($__currentLoopData as $image): $loop = $this->incrementLoopIndices();  ?>
  <?php echo $image; ?>
 
  <?php endforeach; $this->popLoop(); $loop = $this->getFirstLoop(); ?>
+ <?php echo $relatedRoom['randomImage']; ?>
+
  </div>
  <h3><?php echo \htmlentities($room['room_type']??'', ENT_QUOTES, 'UTF-8', false); ?></h3>
  <p><?php echo \htmlentities($room['description']??'', ENT_QUOTES, 'UTF-8', false); ?></p>
