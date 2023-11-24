@@ -56,26 +56,26 @@
     <form method="POST" class="contact__form-container" id="contact-form">
         <div class="form-input contact__form-name">
             <label for="input1"></label>
-            <img src="../img/contact/img-input-1.png" alt="image contact">
+            <img src="/img/contact/img-input-1.png" alt="image contact">
             <input type="text" id="input1" name="contactName" placeholder="Your full name" required>
         </div>
         <div class="form-input contact__form-number">
             <label for="input2"></label>
-            <img src="../img/contact/img-input-2.png" alt="image contact">
+            <img src="/img/contact/img-input-2.png" alt="image contact">
             <input type="text" id="input2" name="contactPhone" placeholder="Add phone number" required>
         </div>
         <div class="form-input contact__form-email">
             <label for="input3"></label>
-            <img src="../img/contact/img-input-3.png" alt="image contact">
+            <img src="/img/contact/img-input-3.png" alt="image contact">
             <input type="text" id="input3" name="contactEmail" placeholder="Enter email address" required>
         </div>
         <div class="form-input contact__form-subject">
             <label for="input4"></label>
-            <img src="../img/contact/img-input-4.png" alt="image contact">
+            <img src="/img/contact/img-input-4.png" alt="image contact">
             <input type="text" id="input4" name="contactSubject" placeholder="Enter subject" required>
         </div>
         <div class="form-input contact__form-message">
-            <img src="../img/contact/img-input-5.png" alt="image contact">
+            <img src="/img/contact/img-input-5.png" alt="image contact">
             <textarea name="contactMessage" placeholder="Enter message" id="input5" required></textarea>
         </div>
         <div class="contact__form-button">
