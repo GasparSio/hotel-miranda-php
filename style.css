@@ -2671,6 +2671,7 @@
   font-weight: 700;
   line-height: 15.23px;
   letter-spacing: 2.8px;
+  margin: auto;
   margin-top: 25px;
   margin-bottom: 25px;
 }
@@ -2722,7 +2723,7 @@
     margin-top: 15px;
   }
   .room__detail-info-container {
-    margin-top: -150px;
+    margin-top: -15px;
     width: 600px;
   }
 }
