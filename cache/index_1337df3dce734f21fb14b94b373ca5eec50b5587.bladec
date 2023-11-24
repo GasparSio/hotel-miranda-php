@@ -29,13 +29,7 @@ $arrayImages = [
  '<img src="/img/home/pic-slider8.jpg" alt="Room image">',
  '<img src="/img/home/pic-slider9.jpg" alt="Room image">',
 ];
-$month = date('m');
-$day = date('d');
-$dayAfter = date('d') + 1;
-$year = date('Y');
 
-$today = $year . '-' . $month . '-' . $day;
-$tomorrow = $year . '-' . $month . '-' . $dayAfter;
 ?>
 
 <?php $_shouldextend[1]=1; ?>

@@ -17,6 +17,12 @@ if ($_SERVER["REQUEST_METHOD"] === "GET") {
     }
     $result = $conn->query($sql);
     $room = $result->fetch_assoc();
+    if ($room['discount']) {
+        $room['discountedPrice'] = intval($room['price'] - ($room['price'] * ($room['discount'] / 100)));
+    } else {
+        $room['discountedPrice'] = $room['price'];
+    };
+
 
     $resultRelatedRoom = $conn->query($sqlRelatedRooms);
     $rooms = $resultRelatedRoom->fetch_all(MYSQLI_ASSOC);

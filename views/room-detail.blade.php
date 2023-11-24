@@ -59,15 +59,12 @@ $photosImages = [
                 <h2>Luxury {{$room['room_type']}}</h2>
             </div>
             <div class="room__detail-price">
-                @if($room['discount'] === 0)
-                <span class="detail-price">${{$room['price']}}</span>
-                <span class="detail-night">/Night</span>
-                @else
-                @php
-                $calculatedPrice = intval($room['price'] - ($room['price'] * ($room['discount'] / 100)));
-                @endphp
-                <span class="discountedPrice">$ {{ $calculatedPrice }}</span>
+                @if($room['discount'])
+                <span class="discountedPrice">$ {{$room['discountedPrice']}}</span>
                 <span class="discountedText">/Night</span>
+                @else
+                <span class="detail-price">${{$room['discountedPrice']}}</span>
+                <span class="detail-night">/Night</span>
                 @endif
             </div>
         </div>
