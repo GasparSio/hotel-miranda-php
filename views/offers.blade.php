@@ -88,10 +88,7 @@ $amenitiesData = [
                     <span class="price-high-text">/Night</span>
                 </div>
                 <div class="offers__room-price-low">
-                    @php
-                    $calculatedPrice = intval($room['price'] - ($room['price'] * ($room['discount'] / 100)));
-                    @endphp
-                    <span class="price-low-number">$ {{ $calculatedPrice }}</span>
+                    <span class="price-low-number">$ {{ $room['discountedPrice'] }}</span>
                     <span class="price-low-text">/Night</span>
                 </div>
             </div>
