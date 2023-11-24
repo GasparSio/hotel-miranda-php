@@ -1,5 +1,5 @@
 <?php
-include '../config.php';
+include '../db-config.php';
 
 $amenityImages = [
     '<i class="fa-solid fa-bed"></i>',

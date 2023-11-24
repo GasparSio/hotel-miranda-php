@@ -1,9 +1,9 @@
 <?php
 require_once('./setup.php');
-require_once("config.php");
+require_once("db-config.php");
 
 
-$sql = "SELECT * FROM room"; // Ejecutar una consulta y obtener los resultados
+$sql = "SELECT * FROM room";
 $result = $conn->query($sql);
 
 

@@ -1,6 +1,6 @@
 <?php
 require_once('./setup.php');
-require_once("config.php");
+require_once("db-config.php");
 
 
 $sql = "select * from room WHERE status = 'Available' AND discount > 0 limit 5";

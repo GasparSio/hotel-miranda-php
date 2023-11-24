@@ -1,7 +1,7 @@
 <?php
 session_start();
 require_once('./setup.php');
-require_once("config.php");
+require_once("db-config.php");
 
 
 if (isset($_GET["availdatein"]) && isset($_GET["availdateout"])) {
