@@ -153,7 +153,7 @@ class BladeOne
      *            <b>sha1</b> the filename is converted into a sha1 hash<br>
      *            <b>md5</b> the filename is converted into a md5 hash<br>
      */
-    protected $compileTypeFileName='auto';
+    protected $compileTypeFileName = 'auto';
 
 
     /** @var array Custom "directive" dictionary. Those directives run at compile time. */
@@ -332,7 +332,7 @@ class BladeOne
             return \htmlentities(\print_r($value, true), ENT_QUOTES, 'UTF-8', false);
         }
         if (\is_numeric($value)) {
-            $value=(string)$value;
+            $value = (string)$value;
         }
         return \htmlentities($value, ENT_QUOTES, 'UTF-8', false);
     }
@@ -375,7 +375,7 @@ class BladeOne
      */
     public function wrapPHP($input, $quote = '"', $parse = true): string
     {
-        if($input===null) {
+        if ($input === null) {
             return 'null';
         }
         if (strpos($input, '(') !== false && !$this->isQuoted($input)) {
@@ -426,7 +426,7 @@ class BladeOne
         if (\is_array($value) || \is_object($value)) {
             return \htmlentities(\print_r($value, true), ENT_NOQUOTES, 'UTF-8', false);
         }
-        return \htmlentities($value??'', ENT_NOQUOTES, 'UTF-8', false);
+        return \htmlentities($value ?? '', ENT_NOQUOTES, 'UTF-8', false);
     }
 
     /**
@@ -713,7 +713,7 @@ class BladeOne
      * This function uses the current url and the baseurl
      *
      * @param string $relativeWeb . Example img/images.jpg
-     * @return string  Example ../../img/images.jpg
+     * @return string  Example ..//img/images.jpg
      */
     public function relative($relativeWeb): string
     {
@@ -895,16 +895,16 @@ class BladeOne
      */
     public function yieldPushContent($section, $default = ''): string
     {
-        if($section===null || $section==='') {
+        if ($section === null || $section === '') {
             return $default;
         }
-        if($section[-1]==='*') {
-            $keys=array_keys($this->pushes);
-            $findme=rtrim($section,'*');
-            $result="";
-            foreach($keys as $key) {
-                if(strpos($key,$findme)===0) {
-                    $result.=\implode(\array_reverse($this->pushes[$key]));
+        if ($section[-1] === '*') {
+            $keys = array_keys($this->pushes);
+            $findme = rtrim($section, '*');
+            $result = "";
+            foreach ($keys as $key) {
+                if (strpos($key, $findme) === 0) {
+                    $result .= \implode(\array_reverse($this->pushes[$key]));
                 }
             }
             return $result;
@@ -1283,13 +1283,13 @@ class BladeOne
         $templateName = (empty($templateName)) ? $this->fileName : $templateName;
 
         $fullPath = $this->getTemplateFile($templateName);
-        if($fullPath == '') {
+        if ($fullPath == '') {
             throw new \RuntimeException('Template not found: ' . $templateName);
         }
 
-        $style=$this->compileTypeFileName;
-        if ($style==='auto') {
-            $style='sha1';
+        $style = $this->compileTypeFileName;
+        if ($style === 'auto') {
+            $style = 'sha1';
         }
         $hash = $style === 'md5' ? \md5($fullPath) : \sha1($fullPath);
         return $this->compiledPath . '/' . basename($templateName) . '_' . $hash . $this->compileExtension;
@@ -2025,8 +2025,8 @@ class BladeOne
             return '';
         }
 
-        $forced = ($mode & 1)!==0; // mode=1 forced:it recompiles no matter if the compiled file exists or not.
-        $runFast = ($mode & 2)!==0; // mode=2 runfast: the code is not compiled neither checked, and it runs directly the compiled
+        $forced = ($mode & 1) !== 0; // mode=1 forced:it recompiles no matter if the compiled file exists or not.
+        $runFast = ($mode & 2) !== 0; // mode=2 runfast: the code is not compiled neither checked, and it runs directly the compiled
         $this->sections = [];
         if ($mode == 3) {
             $this->showError('run', "we can't force and run fast at the same time", true);
@@ -3174,7 +3174,7 @@ class BladeOne
             return $result;
         }
         $prev = '';
-        for ($i = 1; $i <=$c; $i++) {
+        for ($i = 1; $i <= $c; $i++) {
             $r = @explode(':', $array[$i], 2);
             $fnName = trim($r[0]);
             $fnNameF = $fnName[0]; // first character
@@ -3185,7 +3185,7 @@ class BladeOne
             } elseif (method_exists($this, $fnName)) {
                 $fnName = '$this->' . $fnName;
             }
-            $hasArgument=count($r) === 2;
+            $hasArgument = count($r) === 2;
             if ($i === 1) {
                 $prev = $fnName . '(' . $array[0];
                 if ($hasArgument) {
@@ -3195,9 +3195,9 @@ class BladeOne
             } else {
                 $prev = $fnName . '(' . $prev;
                 if ($hasArgument) {
-                    $prev .=','. $r[1] . ')';
+                    $prev .= ',' . $r[1] . ')';
                 } else {
-                    $prev.=')';
+                    $prev .= ')';
                 }
             }
         }
@@ -3584,7 +3584,7 @@ class BladeOne
     protected function compileForeach($expression): string
     {
         //\preg_match('/\( *(.*) * as *([^\)]*)/', $expression, $matches);
-        if($expression===null) {
+        if ($expression === null) {
             return '@foreach';
         }
         \preg_match('/\( *(.*) * as *([^)]*)/', $expression, $matches);
@@ -4172,14 +4172,14 @@ class BladeOne
     public function checkHealthPath(): bool
     {
         echo self::colorLog("Checking Health\n");
-        $status=true;
+        $status = true;
         if (is_dir($this->compiledPath)) {
             echo "Compile-path [$this->compiledPath] is a folder " . self::colorLog("OK") . "\n";
         } else {
-            $status=false;
+            $status = false;
             echo "Compile-path [$this->compiledPath] is not a folder " . self::colorLog("ERROR", 'e') . "\n";
         }
-        foreach($this->templatePath as $t) {
+        foreach ($this->templatePath as $t) {
             if (is_dir($t)) {
                 echo "Template-path (view) [$t] is a folder " . self::colorLog("OK") . "\n";
             } else {
@@ -4193,12 +4193,12 @@ class BladeOne
             $rnd = $this->compiledPath . '/dummy' . rand(10000, 900009);
             $f = @file_put_contents($rnd, 'dummy');
             if ($f === false) {
-                $status=false;
+                $status = false;
                 $error = self::colorLog("Unable to create file [" . $this->compiledPath . '/dummy]', 'e');
             }
             @unlink($rnd);
         } catch (Exception $ex) {
-            $status=false;
+            $status = false;
             $error = self::colorLog($ex->getMessage(), 'e');
         }
         echo "Testing write in the compile folder [$rnd] $error\n";
@@ -4210,7 +4210,7 @@ class BladeOne
     public function createFolders(): void
     {
         echo self::colorLog("Creating Folder\n");
-        echo "Creating compile folder[".self::colorLog($this->compiledPath,'b')."] ";
+        echo "Creating compile folder[" . self::colorLog($this->compiledPath, 'b') . "] ";
         if (!\is_dir($this->compiledPath)) {
             $ok = @\mkdir($this->compiledPath, 0770, true);
             if ($ok === false) {
@@ -4221,8 +4221,8 @@ class BladeOne
         } else {
             echo self::colorLog("Note: folder already exist.\n", 'w');
         }
-        foreach($this->templatePath as $t) {
-            echo "Creating template folder [".self::colorLog($t,'b')."] ";
+        foreach ($this->templatePath as $t) {
+            echo "Creating template folder [" . self::colorLog($t, 'b') . "] ";
             if (!\is_dir($t)) {
                 $ok = @\mkdir($t, 0770, true);
                 if ($ok === false) {
@@ -4278,24 +4278,24 @@ class BladeOne
             $done = true;
             $this->clearcompile();
         }
-        if($createfolder) {
-            $done=true;
+        if ($createfolder) {
+            $done = true;
             $this->createFolders();
         }
         if (!$done) {
             echo " Syntax:\n";
-            echo " ".self::colorLog("-templatepath","b")." <templatepath> (optional) the template-path (view path).\n";
+            echo " " . self::colorLog("-templatepath", "b") . " <templatepath> (optional) the template-path (view path).\n";
             echo "    Default value: 'views'\n";
             echo "    Example: 'php /vendor/bin/bladeonecli /folder/views' (absolute)\n";
             echo "    Example: 'php /vendor/bin/bladeonecli folder/view1' (relative)\n";
-            echo " ".self::colorLog("-compilepath","b")." <compilepath>  (optional) the compile-path.\n";
+            echo " " . self::colorLog("-compilepath", "b") . " <compilepath>  (optional) the compile-path.\n";
             echo "    Default value: 'compiles'\n";
             echo "    Example: 'php /vendor/bin/bladeonecli /folder/compiles' (absolute)\n";
             echo "    Example: 'php /vendor/bin/bladeonecli compiles' (relative)\n";
-            echo " ".self::colorLog("-createfolder","b")." it creates the folders if they don't exist.\n";
+            echo " " . self::colorLog("-createfolder", "b") . " it creates the folders if they don't exist.\n";
             echo "    Example: php ./vendor/bin/bladeonecli -createfolder\n";
-            echo " ".self::colorLog("-clearcompile","b")." It deletes the content of the compile path\n";
-            echo " ".self::colorLog("-check","b")." It checks the folders and permissions\n";
+            echo " " . self::colorLog("-clearcompile", "b") . " It deletes the content of the compile path\n";
+            echo " " . self::colorLog("-check", "b") . " It checks the folders and permissions\n";
         }
     }
 

@@ -18,8 +18,8 @@
 <body>
     <header class="header__section">
         <div class="header__section-ham-menu">
-            <span class="hamIcon"><img src="../img/home/img-hamb.png" alt="Hamburg menu icon" class="icon-menu--big"></span>
-            <span class="crossIcon"><img src="../img/home/img-cross.png" alt="Cross menu icon" class="icon-menu--cross inactive"></span>
+            <span class="hamIcon"><img src="/img/home/img-hamb.png" alt="Hamburg menu icon" class="icon-menu--big"></span>
+            <span class="crossIcon"><img src="/img/home/img-cross.png" alt="Cross menu icon" class="icon-menu--cross inactive"></span>
         </div>
         <div class="header__section-icon">
             <a href="../index.php" class="icon_section-H">
@@ -39,8 +39,8 @@
             <a href="./contact.php" class="section-contact" id="contactLink">Contact</a>
         </div>
         <div class="header__section-search-account">
-            <a href="../contact.php"><img src="../img/home/img-account.png" alt="Account icon"></a>
-            <a href="../rooms-grid.php"><img src="../img/home/img-search.png" alt="Search icon"></a>
+            <a href="../contact.php"><img src="/img/home/img-account.png" alt="Account icon"></a>
+            <a href="../rooms-grid.php"><img src="/img/home/img-search.png" alt="Search icon"></a>
         </div>
         <div class="header__mob-menu inactive">
             <a href="./about.php" class="section-why" id="aboutLink">About Us</a>
@@ -70,11 +70,11 @@
                     </p>
                 </div>
                 <div class="footer__section-icons-container">
-                    <img src="../img/home/footer-social1.png" alt="social media icon">
-                    <img src="../img/home/footer-social2.png" alt="social media icon" class="twitter-icon">
-                    <img src="../img/home/footer-social3.png" alt="social media icon">
-                    <img src="../img/home/footer-social4.png" alt="social media icon">
-                    <img src="../img/home/footer-social5.png" alt="social media icon">
+                    <img src="/img/home/footer-social1.png" alt="social media icon">
+                    <img src="/img/home/footer-social2.png" alt="social media icon" class="twitter-icon">
+                    <img src="/img/home/footer-social3.png" alt="social media icon">
+                    <img src="/img/home/footer-social4.png" alt="social media icon">
+                    <img src="/img/home/footer-social5.png" alt="social media icon">
                 </div>
             </div>
             <div class="footer__section-services-container">
@@ -101,7 +101,7 @@
                 <div class="footer__section-contact-info">
                     <div class="footer__section-phone">
                         <div class="footer__section-image">
-                            <img src="../img/home/footer-icon-contact1.png" alt="icon phone">
+                            <img src="/img/home/footer-icon-contact1.png" alt="icon phone">
                         </div>
                         <div class="footer__section-number">
                             <span class="span-title">Phone Number</span>
@@ -110,7 +110,7 @@
                     </div>
                     <div class="footer__section-phone">
                         <div class="footer__section-image">
-                            <img src="../img/home/footer-icon-contact2.png" alt="icon mail">
+                            <img src="/img/home/footer-icon-contact2.png" alt="icon mail">
                         </div>
                         <div class="footer__section-number">
                             <span class="span-title">Phone Number</span>
@@ -119,7 +119,7 @@
                     </div>
                     <div class="footer__section-phone">
                         <div class="footer__section-image">
-                            <img src="../img/home/footer-icon-contact3.png" alt="icon map">
+                            <img src="/img/home/footer-icon-contact3.png" alt="icon map">
                         </div>
                         <div class="footer__section-number">
                             <span class="span-title">Phone Number</span>
