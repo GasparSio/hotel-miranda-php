@@ -41,6 +41,7 @@ if ($_SERVER["REQUEST_METHOD"] === "GET") {
         if ($stmt->execute()) {
             $formSent = '🎉 Your room has been booked.';
             $_SESSION['notification'] = ['message' => $formSent];
+            header('Refresh: 1; "index.php"');
             echo $blade->run('index', ['notification' => $_SESSION['notification'] ?? null, 'error' => false]);
             session_destroy();
         } else {
