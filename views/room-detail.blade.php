@@ -1,37 +1,3 @@
-<?php
-include '../db-config.php';
-
-$amenityImages = [
-    '<i class="fa-solid fa-bed"></i>',
-    '<i class="fa-solid fa-wifi"></i>',
-    '<i class="fa-solid fa-car"></i>',
-    '<i class="fa-regular fa-snowflake"></i>',
-    '<i class="fa-solid fa-dumbbell"></i>',
-    '<i class="fa-solid fa-ban-smoking"></i>',
-    '<i class="fa-solid fa-martini-glass-citrus"></i>',
-    '<i class="fa-solid fa-mug-hot"></i>',
-    '<i class="fa-solid fa-person-swimming"></i>',
-    '<i class="fa-solid fa-shower"></i>',
-    '<i class="fa-solid fa-bell-concierge"></i>',
-    '<i class="fa-solid fa-hot-tub-person"></i>',
-    '<i class="fa-solid fa-lock"></i>',
-    '<i class="fa-solid fa-sun"></i>',
-    '<i class="fa-solid fa-taxi"></i>',
-];
-$photosImages = [
-    '<img src="/img/home/pic-slider1.jpg" alt="Room image">',
-    '<img src="/img/home/pic-slider2.jpg" alt="Room image">',
-    '<img src="/img/home/pic-slider3.jpg" alt="Room image">',
-    '<img src="/img/home/pic-slider4.jpg" alt="Room image">',
-    '<img src="/img/home/pic-slider5.jpg" alt="Room image">',
-    '<img src="/img/home/pic-slider6.jpg" alt="Room image">',
-    '<img src="/img/home/pic-slider7.jpg" alt="Room image">',
-    '<img src="/img/home/pic-slider8.jpg" alt="Room image">',
-    '<img src="/img/home/pic-slider9.jpg" alt="Room image">',
-];
-
-?>
-
 @extends('layout')
 @section('title', 'Room Detail')
 @section('content')
@@ -189,27 +155,18 @@ $photosImages = [
     <div class="room__detail-line"></div>
     <div class="room__detail-slider-container">
         <div class="room__detail-cards-container">
-            @foreach ($rooms as $room)
+            @foreach ($relatedRooms as $relatedRoom)
             <div class="room__detail-rooms-slider card-detail1" id="cardContainer">
-                <?php
-                $indiceAleatorio = array_rand($photosImages);
-                $imagenAleatoria = $photosImages[$indiceAleatorio];
-                ?>
-                <?php echo $imagenAleatoria; ?>
+                {!! $relatedRoom['randomImage'] !!}
                 <div class="rooms__section-amenities">
-                    <?php
-                    // Mezclar y seleccionar imágenes para cada habitación
-                    shuffle($amenityImages);
-                    $selectedImages = array_slice($amenityImages, 0, 8);
-                    ?>
-                    @foreach ($selectedImages as $image)
+                    @foreach ($relatedRoom['amenityImages'] as $image)
                     {!! $image !!}
                     @endforeach
                 </div>
-                <h3>{{$room['room_type']}}</h3>
+                <h3>{{$relatedRoom['room_type']}}</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipi sicing elit, sed do eiusmod tempor.</p>
                 <div class="room__detail-grid-price">
-                    <span>${{$room['price']}}/Night</span>
+                    <span>${{$relatedRoom['price']}}/Night</span>
                     <form action="../room-detail.php" method="GET">
                         <input type="hidden" name="roomId" value="{{$room['id']}}">
                         <button type="submit">Booking Now</button>

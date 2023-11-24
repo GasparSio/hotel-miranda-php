@@ -2,6 +2,7 @@
 session_start();
 require_once('./setup.php');
 require_once("db-config.php");
+require_once('./utils/genericfn.php');
 
 $formSent = false;
 
@@ -25,9 +26,19 @@ if ($_SERVER["REQUEST_METHOD"] === "GET") {
 
 
     $resultRelatedRoom = $conn->query($sqlRelatedRooms);
-    $rooms = $resultRelatedRoom->fetch_all(MYSQLI_ASSOC);
+    $relatedRooms  = $resultRelatedRoom->fetch_all(MYSQLI_ASSOC);
 
-    echo $blade->run('room-detail', ['room' => $room, 'rooms' => $rooms, 'start' => $start, 'end' => $end]);
+    foreach ($relatedRooms as &$relatedRoom) {
+        $relatedRoom['randomImage'] = getRandomImage();
+        $relatedRoom['amenityImages'] = getAmenityImages();
+    }
+
+    echo $blade->run('room-detail', [
+        'room' => $room,
+        'relatedRooms' => $relatedRooms,
+        'start' => $start,
+        'end' => $end,
+    ]);
 } else if ($_SERVER["REQUEST_METHOD"] === "POST") {
     if (isset($_POST["check-in"]) && isset($_POST["check-out"]) && isset($_POST["fullname"]) && isset($_POST["phone"]) && isset($_POST["message"])) {
         $fullname = htmlspecialchars($_POST["fullname"]);
@@ -48,7 +59,9 @@ if ($_SERVER["REQUEST_METHOD"] === "GET") {
             $formSent = '🎉 Your room has been booked.';
             $_SESSION['notification'] = ['message' => $formSent];
             header('Refresh: 1; "index.php"');
-            echo $blade->run('index', ['notification' => $_SESSION['notification'] ?? null, 'error' => false]);
+            echo $blade->run('index', [
+                'notification' => $_SESSION['notification'] ?? null, 'error' => false
+            ]);
             session_destroy();
         } else {
             $formSent = "Error: " . $stmt->error;
