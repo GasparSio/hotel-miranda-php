@@ -13,7 +13,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $subjectOfReview = htmlspecialchars($_POST["contactSubject"]);
     $reviewBody = htmlspecialchars($_POST["contactMessage"]);
 
-    $sql = "INSERT INTO contact (full_name, email, phone_number, subject_of_review, review_body, dateTime, status) VALUES (?, ?, ?, ?, ?, CURDATE(), 'Not Archived')";
+    $sql = "INSERT INTO contact (full_name, email, phone_number, subject_of_review, review_body) VALUES (?, ?, ?, ?, ?)";
 
     // Preparar la declaración
     $stmt = $conn->prepare($sql);

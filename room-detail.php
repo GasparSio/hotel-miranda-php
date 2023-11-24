@@ -49,8 +49,8 @@ if ($_SERVER["REQUEST_METHOD"] === "GET") {
         $message = htmlspecialchars($_POST["message"]);
         $roomSessionId = $_SESSION['roomSessionId'];
         $sql = "INSERT INTO 
-                booking (guest, phone_number, email, order_date, check_in, check_out, special_request, status, room_id)
-				VALUES ('$fullname', '$phone', '$email', CURDATE(), '$checkin', '$checkout', '$message', 'Check In', '$roomSessionId');";
+                booking (guest, phone_number, email, check_in, check_out, special_request, room_id)
+				VALUES ('$fullname', '$phone', '$email', '$checkin', '$checkout', '$message', '$roomSessionId');";
 
         $stmt = $conn->prepare($sql);
 
