@@ -3,7 +3,7 @@ require_once('./setup.php');
 require_once("db-config.php");
 require_once('./utils/genericfn.php');
 
-$sql = "select * from room WHERE status = 'Available' AND discount > 0 limit 5";
+$sql = "select * from room WHERE status = 'Available' AND discount > 0 ORDER BY RAND() limit 5";
 $result = $conn->query($sql);
 
 
