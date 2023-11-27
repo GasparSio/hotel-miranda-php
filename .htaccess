@@ -14,6 +14,9 @@
     # Redirigir la URL /rooms a rooms.php
     RewriteRule ^rooms$ rooms.php [L]
 
+    # Redirigir la URL /room-detail a room-detail.php
+    RewriteRule ^rooms$ rooms.php [L]
+
     # Redirigir todas las solicitudes no existentes a index.php
     RewriteEngine on
     RewriteCond %{REQUEST_FILENAME} !-d

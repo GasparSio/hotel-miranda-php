@@ -2,7 +2,7 @@
 session_start();
 require_once('./setup.php');
 require_once("db-config.php");
-
+require_once('./utils/genericfn.php');
 
 if (isset($_GET["availdatein"]) && isset($_GET["availdateout"])) {
     $checkin = htmlspecialchars($_GET["availdatein"]);
@@ -31,6 +31,12 @@ if (isset($_GET["availdatein"]) && isset($_GET["availdateout"])) {
 
 $result = $conn->query($sql);
 $rooms = $result->fetch_all(MYSQLI_ASSOC);
+
+foreach ($rooms as &$room) {
+    $room['randomImage'] = getRandomImage();
+    $room['amenityImages'] = getAmenityImages();
+}
+
 echo $blade->run('rooms-grid', ['rooms' => $rooms]);
 
 $conn->close();
