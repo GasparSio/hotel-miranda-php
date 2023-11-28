@@ -12,10 +12,10 @@
     RewriteRule ^offers$ offers.php [L]
 
     # Redirigir la URL /rooms a rooms.php
-    RewriteRule ^rooms$ rooms.php [L]
+    RewriteRule ^rooms-grid$ rooms-grid.php [L]
 
     # Redirigir la URL /room-detail a room-detail.php
-    RewriteRule ^rooms$ rooms.php [L]
+    RewriteRule ^room-detail$ room-detail.php [L]
 
     # Redirigir todas las solicitudes no existentes a index.php
     RewriteEngine on

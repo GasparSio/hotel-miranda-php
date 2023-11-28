@@ -42,7 +42,6 @@
     <div class="rooms-pagination">
         <button class="rooms-prev"><img src="/img/rooms-grid/prev-arrow.png" alt=""></button>
         <div class="rooms-pages">
-            <!-- Los botones de las páginas se generarán dinámicamente con JavaScript -->
         </div>
         <button class="rooms-next"><img src="/img/rooms-grid/next-arrow.png" alt=""></button>
     </div>
