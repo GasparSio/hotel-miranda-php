@@ -13,7 +13,7 @@
         <div class="room__detail-about__section-links">
             <a href="./index.php" class="room-detail-link-home">Home</a>
             <span>|</span>
-            <a href="./room-detail.php" class="room-detail-link-about">Room Details</a>
+            <a href="#" class="room-detail-link-about">Room Details</a>
         </div>
     </div>
 </section>
