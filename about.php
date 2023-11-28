@@ -1,12 +1,5 @@
 <?php
-require 'lib/BladeOne.php';
-
-use eftec\bladeone\BladeOne;
-
-$views = 'views'; // Directorio donde se encuentran tus plantillas Blade.
-$compiledFolder = 'cache'; // Directorio donde se almacenarán las vistas compiladas.
-
-$blade = new BladeOne($views, $compiledFolder, BladeOne::MODE_AUTO);
+require_once('./setup.php');
 
 // Pasar datos a la vista si es necesario
 $data = [
