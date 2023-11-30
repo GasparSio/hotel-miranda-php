@@ -254,7 +254,7 @@
             <span class="stadistics__section-span-number">84K</span>
             <span class="stadistics__section-span-symbol">+</span>
         </div>
-        <p>Projects are Completed</p>
+        <p class="stadistics-category">Projects are Completed</p>
     </div>
     <div class="stadistics__section stadistics__section-2">
         <img src="/img/home/img-stad-2.png" alt="Icon image">
@@ -262,7 +262,7 @@
             <span class="stadistics__section-span-number">10M</span>
             <span class="stadistics__section-span-symbol">+</span>
         </div>
-        <p>Active Backers Around World</p>
+        <p class="stadistics-category">Active Backers Around World</p>
     </div>
     <div class="stadistics__section stadistics__section-3">
         <img src="/img/home/img-stad-3.png" alt="Icon image">
@@ -270,7 +270,7 @@
             <span class="stadistics__section-span-number">02K</span>
             <span class="stadistics__section-span-symbol">+</span>
         </div>
-        <p>Categories Served</p>
+        <p class="stadistics-category">Categories Served</p>
     </div>
     <div class="stadistics__section stadistics__section-4">
         <img src="/img/home/img-stad-4.png" alt="">
@@ -278,7 +278,7 @@
             <span class="stadistics__section-span-number">100M</span>
             <span class="stadistics__section-span-symbol">+</span>
         </div>
-        <p>Idea Raised Funds</p>
+        <p class="stadistics-category">Idea Raised Funds</p>
     </div>
 </section>
 

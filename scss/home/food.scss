@@ -38,7 +38,9 @@
         line-height: 60px;
         letter-spacing: -1.2px;
         color: $background-black;
+
     }
+    
 }
 
 //SLIDER FOOD CARDS
@@ -87,6 +89,7 @@
     flex-direction: column;
     align-items: flex-start;
     margin-bottom: 25px;
+    padding: 3px;
     h1{
         font-family: $old-standard-font;
         font-size: 20px;
@@ -102,6 +105,9 @@
         line-height: 24px;
         color: $background-black;
         margin-top: 9px;
+    }
+    &:hover {
+        box-shadow: 5px 5px 10px rgb(147 110 5 / 28%);
     }
 }
 .food__cards-container-button{

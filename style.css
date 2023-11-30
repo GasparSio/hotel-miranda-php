@@ -639,17 +639,18 @@
   border-bottom-color: #BEAD8E;
   width: 290px;
   padding-left: 30px;
+  padding-top: 5px;
 }
 
 .input-calendar[type=date]::-webkit-calendar-picker-indicator {
-  background-size: 20px 20px;
+  background-size: 16px 16px;
   height: 20px;
   width: 100%;
   background-position-x: 1%;
   color: #BEAD8E;
   position: absolute;
   cursor: pointer;
-  filter: saturate(0.1);
+  filter: invert(0.8);
 }
 
 .input__container__departure label {
@@ -735,6 +736,12 @@
 
 .about__section-info {
   margin-top: 30px;
+  box-shadow: 0px 0px 9px rgba(173, 174, 179, 0.61);
+  align-items: center;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
 }
 .about__section-info h2 {
   width: 90%;
@@ -834,6 +841,9 @@
     width: 50%;
     margin: 0;
     max-width: 770px;
+  }
+  .about__section-feature img {
+    border-radius: 5px;
   }
 }
 .swiper {
@@ -1041,6 +1051,7 @@
 }
 .video__section-video iframe {
   height: 250px;
+  border-radius: 5px;
 }
 
 .video__section-button {
@@ -1347,6 +1358,7 @@
   flex-direction: column;
   align-items: flex-start;
   margin-bottom: 25px;
+  padding: 3px;
 }
 .section-food-info h1 {
   font-family: "Old Standard TT";
@@ -1363,6 +1375,9 @@
   line-height: 24px;
   color: #222222;
   margin-top: 9px;
+}
+.section-food-info:hover {
+  box-shadow: 5px 5px 10px rgba(147, 110, 5, 0.28);
 }
 
 .food__cards-container-button {
@@ -1518,6 +1533,10 @@
   line-height: 81.84px;
   color: #FFFFFF;
 }
+.stadistics__section-span-number:hover {
+  color: #BEAD8E;
+  cursor: pointer;
+}
 
 .stadistics__section-span-symbol {
   font-size: 16px;
@@ -1525,6 +1544,15 @@
   font-weight: 700;
   line-height: 21.82px;
   color: #FFFFFF;
+}
+.stadistics__section-span-symbol:hover {
+  color: #BEAD8E;
+  cursor: pointer;
+}
+
+.stadistics-category:hover {
+  color: #BEAD8E;
+  cursor: pointer;
 }
 
 @media only screen and (min-width: 1000px) {
@@ -1702,6 +1730,9 @@
   line-height: 14px;
   letter-spacing: 2.4px;
   color: #222222;
+}
+.about__services:hover {
+  background-color: rgba(177, 171, 171, 0.3294117647);
 }
 
 @media only screen and (min-width: 1000px) {

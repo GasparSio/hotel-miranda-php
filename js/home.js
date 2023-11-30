@@ -8,8 +8,8 @@ let cardIndex = 0;
 const numCards = document.querySelectorAll(".card").length;
 
 function showCard(index) {
-    const cards = document.querySelectorAll(".card");
-    cardsContainer.style.transform = `translateX(-${index * 320}px)`;
+  const cards = document.querySelectorAll(".card");
+  cardsContainer.style.transform = `translateX(-${index * 320}px)`;
 }
 
 prevBtn1.addEventListener("click", () => {
@@ -18,31 +18,31 @@ prevBtn1.addEventListener("click", () => {
 });
 
 nextBtn1.addEventListener("click", () => {
-    cardIndex = (cardIndex + 1) % numCards;
-    showCard(cardIndex);
+  cardIndex = (cardIndex + 1) % numCards;
+  showCard(cardIndex);
 });
 
 //SLIDER FOOD
-const cardsContainer2 = document.querySelector(".food__cards-container");
-const prevBtn2 = document.querySelector(".prev-btn2");
-const nextBtn2 = document.querySelector(".next-btn2");
+const cardsContainerFood = document.querySelector(".food__cards-container");
+const prevBtnFood = document.querySelector(".prev-btn2");
+const nextBtn2Food = document.querySelector(".next-btn2");
 
-let cardIndex2 = 0;
-const numCards2 = document.querySelectorAll(".card-food").length;
+let cardIndexFood = 0;
+const numCardsFood = document.querySelectorAll(".card-food").length;
 
-function showCardFood(index) {
-    const cards = document.querySelectorAll(".card-food");
-    cardsContainer2.style.transform = `translateX(-${index * 320}px)`;
+function showCardFoodHome(index) {
+  const cardsFood = document.querySelectorAll(".card-food");
+  cardsContainerFood.style.transform = `translateX(-${index * 320}px)`;
 }
 
-prevBtn2.addEventListener("click", () => {
-  cardIndex2 = (cardIndex2 - 1 + numCards2) % numCards2;
-  showCardFood(cardIndex2);
+prevBtnFood.addEventListener("click", () => {
+  cardIndexFood = (cardIndexFood - 1 + numCardsFood) % numCardsFood;
+  showCardFoodHome(cardIndexFood);
 });
 
-nextBtn2.addEventListener("click", () => {
-    cardIndex2 = (cardIndex2 + 1) % numCards2;
-    showCardFood(cardIndex2);
+nextBtn2Food.addEventListener("click", () => {
+  cardIndexFood = (cardIndexFood + 1) % numCardsFood;
+  showCardFoodHome(cardIndexFood);
 });
 
 

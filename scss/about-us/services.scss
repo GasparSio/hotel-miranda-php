@@ -32,6 +32,9 @@
         letter-spacing: 2.4px;
         color: $background-black;
     }
+    &:hover{
+        background-color: #b1abab54;
+    }
 }
 
 @media only screen and (min-width: 1000px){

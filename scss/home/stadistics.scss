@@ -33,6 +33,10 @@
     font-weight: $weight-700;
     line-height: 81.84px;
     color: $background-white;
+    &:hover{
+        color: $color-botton;
+        cursor: pointer;
+    }
 }
 .stadistics__section-span-symbol{
     font-size: 16px;
@@ -40,8 +44,15 @@
     font-weight: $weight-700;
     line-height: 21.82px;
     color: $background-white;
+    &:hover{
+        color: $color-botton;
+        cursor: pointer;
+    }
 }
-
+.stadistics-category:hover{
+    color: $color-botton;
+    cursor: pointer;
+}
 @media only screen and (min-width: 1000px){
     .stadistics__section-container{
         flex-direction: row;

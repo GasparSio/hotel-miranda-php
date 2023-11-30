@@ -42,18 +42,18 @@
     border-bottom-color: $color-botton;
     width: 290px;
     padding-left: 30px;
+    padding-top: 5px;
 }
 
 .input-calendar[type="date"]::-webkit-calendar-picker-indicator{
-    // background-image: url("..//img/home/icon-calendar.png") no-repeat center;
-    background-size: 20px 20px;
+    background-size: 16px 16px;
     height: 20px;
     width: 100%;
     background-position-x: 1%;
     color: $color-botton;
     position: absolute;
     cursor: pointer;
-    filter: saturate(0.1);
+    filter: invert(0.8);
 }
 
 .input__container__departure{
