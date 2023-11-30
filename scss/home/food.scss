@@ -147,6 +147,10 @@
         scroll-snap-align: start;
         object-fit: cover;
         border-radius: 4px;
+        transition: transform;
+        &:hover{
+            transform: scale(1.01);
+        }
     }
 }
 .food__section-slider-nav{
